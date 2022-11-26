@@ -1,0 +1,27 @@
+@import '../../../lib//styles/mediaQuery.scss';
+
+.carousel-box {
+    margin: 70px auto;
+}
+
+.image-box {
+    width: 90vw;
+    margin: 0 auto;
+
+    & img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: $narrower) {
+    .carousel-box {
+        margin-top: 130px;
+    }
+}
+
+@media screen and (max-width: $narrowest) {
+    .image-box img {
+        height: 60vw;
+    }
+}

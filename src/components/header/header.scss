@@ -1,0 +1,181 @@
+@import '../../lib/styles/mediaQuery.scss';
+
+.icon-logo {
+    font-size: 17px;
+}
+
+.main-header-box {
+    height: 50px;
+    margin: 0 auto;
+    max-width: 1060px;
+}
+
+.main-header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.main-header-nav-top {
+    display: flex;
+}
+
+.main-header-nav-top-logo {
+    display: flex;
+    height: 21px;
+    align-items: center;
+
+    & button {
+        border: 0;
+        background-color: transparent;
+        margin-right: 11px;
+        margin-bottom: -9px;
+    }
+
+    & img {
+        width: 17px;
+        height: 14px;
+        object-fit: contain;
+    } 
+
+    & a {
+        height: 14px;
+    }
+}
+
+.menu-className {
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+
+    & li::after {
+        content:'';
+        height: 100%;
+        width: 10px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.aside-search-box {
+    height: 50px;
+    box-sizing: border-box;
+    
+
+    & ul {
+        display: flex;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    & ul li {
+        margin: 1px 13px;
+    }
+
+    & ul li:last-child {
+        margin-top: -5px;
+
+        &::before {
+            display: inline-block;
+            content: "";
+            width: 1px;
+            height: 13px;
+            background-color: #e1e2e3;
+            margin: -10px 20px auto -25px;
+        }
+    }
+
+    & a {
+        line-height: 18px;
+    }
+
+    & button {
+        background-color: transparent;
+        border: 0;
+    }
+}
+
+.search-button {
+    border: 0;
+    background-color: transparent;
+}
+
+.dashboard-button {
+    font-size: 13px;
+    color: #666;
+    line-height: 30px;
+    height: 30px;
+    border: 1px solid #e1e2e3;
+    border-radius: 15px;
+    padding: 0 10px;
+    margin-left: 20px;
+    font-weight: 400;
+
+    & a {
+        margin-left: 2px;
+    }
+}
+
+@media screen and (max-width: $narrower) {
+    .main-header-box {
+        height: 110px;
+    }
+
+    .main-header-nav {
+        padding: 0 25px;
+    }
+    .main-header-nav-top {
+        height: 60px;
+        box-sizing: border-box;
+        width: 100%;
+        justify-content: space-between;
+        padding-top: 16px;
+    }
+
+    .blue-signup-button {
+        display: inline-block;
+        color: #36f;
+        font-size: 14px;
+        line-height: 32px;
+        height: 34px;
+        border: 1px solid #36f;
+        border-radius: 17px;
+        padding: 0 14px;
+        background-color: transparent;
+    }
+
+    .menu-className {
+        & li {
+            padding: 11px 0 19px 8px;
+        }
+    }
+}
+
+@media screen and (min-width: $narrowest) {
+    .menu-className { 
+        font-size: 12px;
+    }
+
+    .aside-search-box {
+        padding: 16px 0;
+    }
+    
+}
+
+@media screen and (min-width: $narrower) {
+    .menu-className { 
+        li::after {
+            content:'';
+            height: 100%;
+            width: 28px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    .main-header-box {
+        width: 93.5%;
+    }
+}
