@@ -1,0 +1,35 @@
+@import '../../../lib/styles/mediaQuery.scss';
+
+.category-scroll {
+    display: flex;
+    margin: 30px 0;
+    max-width: 1050px;
+}
+
+
+.category-slide {
+    width: 100%;
+    overflow: hidden;
+}
+
+.category-list-item {
+    min-width: 150px;
+}
+
+.open-category-modal {
+    background-color: white;
+    border: 1px solid #e1e2e3;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .05);
+    min-width: 40px;
+    min-height: 40px;
+    padding-bottom: 7px;
+    border-radius: 4px;
+    
+    vertical-align: middle;
+}
+
+@media screen and (min-width: $narrowest) {
+    .category-scroll {
+        min-width: 70%;
+    }
+}

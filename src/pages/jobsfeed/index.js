@@ -1,8 +1,10 @@
+import CarouselContainer from '../../components/common/carousel/carouselContainer';
+
 const JobsFeedPage = () => {
     return (
-        <div>
-            JobsFeedPage
-        </div>
+        <>
+            <CarouselContainer />
+        </>
     )
 }
 

@@ -49,6 +49,7 @@
     display: flex;
     font-size: 14px;
     font-weight: 600;
+    height: 50px;
 
     & li::after {
         content:'';
@@ -57,12 +58,16 @@
         display: inline-block;
         vertical-align: middle;
     }
+
+    & li {
+        text-align: center;
+    }
 }
 
 .aside-search-box {
     height: 50px;
     box-sizing: border-box;
-    
+    padding: 16px 0;
 
     & ul {
         display: flex;
@@ -72,19 +77,6 @@
 
     & ul li {
         margin: 1px 13px;
-    }
-
-    & ul li:last-child {
-        margin-top: -5px;
-
-        &::before {
-            display: inline-block;
-            content: "";
-            width: 1px;
-            height: 13px;
-            background-color: #e1e2e3;
-            margin: -10px 20px auto -25px;
-        }
     }
 
     & a {
@@ -151,17 +143,31 @@
             padding: 11px 0 19px 8px;
         }
     }
+
+    .aside-search-box {
+        & ul li {
+            margin: -5px 3px 0;
+        }
+
+        & ul li:last-child {
+    
+            &::before {
+                display: none;
+                content: "";
+                width: 1px;
+                height: 13px;
+                background-color: #e1e2e3;
+                margin: -10px 20px auto -25px;
+            }
+        }
+    
+    }
 }
 
 @media screen and (min-width: $narrowest) {
     .menu-className { 
         font-size: 12px;
     }
-
-    .aside-search-box {
-        padding: 16px 0;
-    }
-    
 }
 
 @media screen and (min-width: $narrower) {
@@ -169,13 +175,45 @@
         li::after {
             content:'';
             height: 100%;
-            width: 28px;
+            width: 1px;
             display: inline-block;
             vertical-align: middle;
+        }
+
+        li {
+            padding-left: 5px;
+            padding-right: 3px;
+            margin-right: 16px;
+            margin-top: 7px;
         }
     }
 
     .main-header-box {
         width: 93.5%;
+    }
+
+    .aside-search-box {
+        & ul li:last-child {
+            margin-top: -5px;
+    
+            &::before {
+                display: inline-block;
+                content: "";
+                width: 1px;
+                height: 13px;
+                background-color: #e1e2e3;
+                margin: -10px 20px auto -25px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $narrow) {
+    .menu-className { 
+        font-size: 13px;
+        
+        & li:first-child {
+            margin-left: 30px;
+        }
     }
 }

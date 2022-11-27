@@ -1,0 +1,57 @@
+@import '../../lib/styles/mediaQuery.scss';
+
+.section-box {
+    margin: 0 auto;
+}
+
+.title-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & h2 {
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    & button {
+        border: 0;
+        background-color: transparent;
+        padding-top: 5px;
+    }
+
+    & button svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+/** max-width */
+@media screen and (max-width: $narrow) {
+    .section-box {
+        width: 87.25%;
+    }
+}
+
+/** min-width */
+
+@media screen and (min-width: $narrow) { 
+    .section-box {
+        max-width: 1100px;
+        width: 80%;
+    }
+
+    .title-box {
+
+        & h2 {
+            font-size: 22px;
+        }
+
+        & button svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+}

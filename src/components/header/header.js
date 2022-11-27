@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { sizes } from '../../lib/styles/mediaQuery';
 import MediaQuery from 'react-responsive';
 import './header.scss';
+import { useLocation } from 'react-router-dom';
 
 const HeaderWrap = styled.div`
     position: fixed;
@@ -13,8 +14,13 @@ const HeaderWrap = styled.div`
     color: black;
 `;
 
+const Li = styled.li`
+    box-shadow: ${ props => props.blue ? "inset 0 -2px #258bf7" : "none" };
+`;
 
 const Header = () => {
+    const location = useLocation();
+
     return (
         <HeaderWrap>
             <div className="main-header-box">
@@ -56,36 +62,36 @@ const Header = () => {
                             <button type="button" className="blue-signup-button"><Link to="/login">회원가입하기</Link></button>
                         </MediaQuery>
                     </div>
-                        <ul className="menu-className" >
-                            <MediaQuery maxWidth={sizes.narrowest}>
-                                <li><Link to="/">홈</Link></li>
+                    <ul className="menu-className" >
+                        <MediaQuery maxWidth={sizes.narrowest}>
+                            <Li blue={location.pathname === "/"}><Link to="/">홈</Link></Li>
+                        </MediaQuery>
+                            <Li blue={location.pathname === "/jobsfeed"}><Link to="/jobsfeed">채용</Link></Li>
+                            <Li><Link to="#">이벤트</Link></Li>
+                        <MediaQuery minWidth={sizes.narrowest}>
+                            <Li><Link to="#">직군별 연봉</Link></Li>
+                            <Li><Link to="#">이력서</Link></Li>
+                            <Li><Link to="#" className="new">커뮤니티</Link></Li>
+                            <Li><Link to="#">프리랜서</Link></Li>
+                            <Li><Link to="#"className="beta">AI합격예측</Link></Li>
+                        </MediaQuery>
+                    </ul>
+                    <aside className="aside-search-box">
+                        <ul>
+                            <li><button type="button" className="search-button">
+                                <svg xmlns="https://www.w3.org/2000/svg" xmlnsXlink="https://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18"><defs><path id="qt2dnsql4a" d="M15.727 17.273a.563.563 0 10.796-.796l-4.875-4.875-.19-.165a.563.563 0 00-.764.028 5.063 5.063 0 111.261-2.068.562.562 0 101.073.338 6.188 6.188 0 10-1.943 2.894l4.642 4.644z"></path></defs><g fill="none" fillRule="evenodd"><use fill="#333" fillRule="nonzero" stroke="#333" strokeWidth=".3" xlinkHref="#qt2dnsql4a"></use></g></svg>
+                            </button></li>
+                            <MediaQuery minWidth={sizes.narrower}>
+                                <li><Link to="/login">회원가입/로그인</Link></li>
+                                <li className="dashboard-button" ><Link to="#">기업 서비스</Link></li>
                             </MediaQuery>
-                                <li><Link to="/jobsfeed">채용</Link></li>
-                                <li><Link to="#">이벤트</Link></li>
-                            <MediaQuery minWidth={sizes.narrowest}>
-                                <li><Link to="#">직군별 연봉</Link></li>
-                                <li><Link to="#">이력서</Link></li>
-                                <li><Link to="#" className="new">커뮤니티</Link></li>
-                                <li><Link to="#">프리랜서</Link></li>
-                                <li><Link to="#"className="beta">AI합격예측</Link></li>
+                            <MediaQuery maxWidth={sizes.narrower}>
+                                <li><button type="button">
+                                <svg width="18" height="18" xmlns="https://www.w3.org/2000/svg"><defs><path d="M9 7.5a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 9 7.5zm5.05 0a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 14.05 7.5zM4 7.5a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 4 7.5z" id="a"></path></defs><g fill="none" fillRule="evenodd"><mask id="b" fill="#fff"><use xlinkHref="#a"></use></mask><use fill="#333" xlinkHref="#a"></use><g mask="url(#b)" fill="#333"><path d="M0 0h18v18H0z"></path></g></g></svg>
+                                </button></li>
                             </MediaQuery>
                         </ul>
-                        <aside className="aside-search-box">
-                            <ul>
-                                <li><button type="button" className="search-button">
-                                    <svg xmlns="https://www.w3.org/2000/svg" xmlnsXlink="https://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18"><defs><path id="qt2dnsql4a" d="M15.727 17.273a.563.563 0 10.796-.796l-4.875-4.875-.19-.165a.563.563 0 00-.764.028 5.063 5.063 0 111.261-2.068.562.562 0 101.073.338 6.188 6.188 0 10-1.943 2.894l4.642 4.644z"></path></defs><g fill="none" fillRule="evenodd"><use fill="#333" fillRule="nonzero" stroke="#333" strokeWidth=".3" xlinkHref="#qt2dnsql4a"></use></g></svg>
-                                </button></li>
-                                <MediaQuery minWidth={sizes.narrower}>
-                                    <li><Link to="/login">회원가입/로그인</Link></li>
-                                    <li className="dashboard-button" ><Link to="#">기업 서비스</Link></li>
-                                </MediaQuery>
-                                <MediaQuery maxWidth={sizes.narrower}>
-                                    <li><button type="button">
-                                    <svg width="18" height="18" xmlns="https://www.w3.org/2000/svg"><defs><path d="M9 7.5a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 9 7.5zm5.05 0a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 14.05 7.5zM4 7.5a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 4 7.5z" id="a"></path></defs><g fill="none" fillRule="evenodd"><mask id="b" fill="#fff"><use xlinkHref="#a"></use></mask><use fill="#333" xlinkHref="#a"></use><g mask="url(#b)" fill="#333"><path d="M0 0h18v18H0z"></path></g></g></svg>
-                                    </button></li>
-                                </MediaQuery>
-                            </ul>
-                        </aside>
+                    </aside>
                 </nav>
             </div>
         </HeaderWrap>
