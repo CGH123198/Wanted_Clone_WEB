@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import './careerInsightSection.scss';
-import CategorySlider from '../common/categorySlider/categorySlider';
+import CategorySlider from '../../common/categorySlider/categorySlider';
+import CareerInsightListContainer from '../careerInsightList/careerInsightListContainer';
 
 const LandingSectionWrap = styled.section`
     padding: 60px 0;
@@ -17,6 +18,7 @@ const CareerInsightSection = () => {
                     </button>
                 </div>
                 <CategorySlider />
+                <CareerInsightListContainer />
             </div>
         </LandingSectionWrap>
     )

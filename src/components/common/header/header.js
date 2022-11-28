@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { sizes } from '../../lib/styles/mediaQuery';
+import { sizes } from '../../../lib/styles/mediaQuery';
 import MediaQuery from 'react-responsive';
 import './header.scss';
 import { useLocation } from 'react-router-dom';
@@ -12,6 +12,7 @@ const HeaderWrap = styled.div`
     box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
     width: 100%;
     color: black;
+    z-index: 10;
 `;
 
 const Li = styled.li`

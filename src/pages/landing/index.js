@@ -1,11 +1,15 @@
-import CarouselContainer from '../../components/common/carousel/carouselContainer';
-import CareerInsightSection from '../../components/landing/careerInsightSection';
+import CarouselComponent from '../../components/common/carousel/carouselComponent';
+import CareerInsightSection from '../../components/landing/careerInsightSection/careerInsightSection';
+import SectionDivider from '../../components/common/sectionDivider/sectionDivider';
+import RecruitmentSection from '../../components/landing/recruitmentSection/recruitmentSection';
 
 const LandingPage = () => {
     return(
         <>
-            <CarouselContainer />
+            <CarouselComponent />
             <CareerInsightSection />
+            <SectionDivider />
+            <RecruitmentSection />
         </>
     )
 }

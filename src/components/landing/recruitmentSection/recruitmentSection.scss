@@ -1,0 +1,122 @@
+@import '../../../lib/styles/mediaQuery.scss';
+
+.recruitment-section-box {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.recruitment-section-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    & h2 {
+        line-height: 1.33;
+        font-weight: 700;
+    }
+}
+
+.recruitment-grid-container {
+    display: flex;
+    border: 1px solid #ececec;
+    border-radius: 4px;
+    color: #333;
+}
+
+.recruitment-grid-item {
+    padding: 18px 0 0;
+    border: 1px solid #ececec;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: auto;
+
+    & span {
+        margin: auto;
+    }
+
+    & .grid-icon {
+        cursor: pointer;
+        width: 32px;
+        height:  32px;
+    }
+}
+.grid-item-button {
+    background-color: white;
+    border: 0;
+    font-size: 16px;
+    height: 50px;
+}
+
+.grid-item-title {
+    position: relative;
+    top: -2px;
+    justify-content: center;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 23px;
+}
+
+.grid-icon-arrow {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+
+    & svg {
+        width: inherit;
+        height: inherit;
+    }
+}
+
+/** max-width*/
+/** max-width*/
+@media screen and (max-width: $narrowest) {
+    .recruitment-section-header {
+        & h2 {
+            font-size: 18px;
+        }
+    }
+
+    .recruitment-grid-item {
+        & svg {
+            width: 28px;
+            height:  28px;
+        }
+    }
+
+    .recruitment-grid-item {
+        box-sizing: border-box;
+        width: 50%;
+        padding: 12px 0 0;
+    }
+
+    .recruitment-grid-container {
+        flex-wrap: wrap;
+    }
+
+    .grid-icon-arrow {
+
+        & svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+
+/** min-width*/
+/** min-width*/
+@media screen and (min-width: $narrowest) {
+    .recruitment-section-header {
+        & h2 {
+            font-size: 22px;
+        }
+    }
+}
+
+
+@media screen and (min-width: $narrow) {
+    .recruitment-section-box {
+        max-width: 1100px;
+    }
+}

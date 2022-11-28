@@ -1,0 +1,74 @@
+@import '../../../lib//styles/mediaQuery.scss';
+
+.matched-job-title-h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: normal;
+    text-align: left;
+    color: #111;
+}
+
+.matched-job-title-main {
+    text-align: center;
+
+    & img {
+        width: 114px;
+        vertical-align: -4px;
+        margin-right: 3px;
+    }
+}
+
+.matched-job-list-title-button {
+    background-color: transparent;
+    border: 0;
+
+    & svg {
+        position: relative;
+        top: 3px;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.matched-job-title-more {
+    & a {
+        padding: 0;
+        margin: 0;
+        font-size: 15px;
+        font-weight: 400;
+        color: #767676!important;
+    }
+
+    & span {
+        font-size: 15px;
+        font-weight: 400;
+        color: #767676!important;
+        margin-left: 3px;
+    }
+}
+
+
+/** max-width*/
+@media screen and (max-width: $narrowest) {
+    .matched-job-title-h2 {
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .matched-job-title-main {
+        width: 210px;
+    }
+
+    .matched-job-list-title-button {
+        & svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

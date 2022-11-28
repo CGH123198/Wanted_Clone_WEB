@@ -2,8 +2,11 @@
 
 .category-scroll {
     display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
     margin: 30px 0;
     max-width: 1050px;
+    text-align: right;
 }
 
 
@@ -16,20 +19,16 @@
     min-width: 150px;
 }
 
-.open-category-modal {
-    background-color: white;
-    border: 1px solid #e1e2e3;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, .05);
-    min-width: 40px;
-    min-height: 40px;
-    padding-bottom: 7px;
-    border-radius: 4px;
-    
-    vertical-align: middle;
-}
-
+/** min-width */
 @media screen and (min-width: $narrowest) {
     .category-scroll {
-        min-width: 70%;
+        min-width: 100%;
+    }
+}
+
+/** max-width */
+@media screen and (max-width: $narrowest) {
+    .category-slide {
+        height: 35px;
     }
 }

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { sizes } from '../../../lib/styles/mediaQuery';
 
 const CategoryBtn= styled.button`
     display: inline-block;
@@ -17,6 +18,10 @@ const CategoryBtn= styled.button`
     
     &:hover {
         background-color: #f7f0d0;
+    }
+
+    @media screen and (max-width: ${sizes.narrowest}px) {
+        max-height: 35px;
     }
 `;
 

@@ -1,0 +1,73 @@
+@import '../../../lib/styles/mediaQuery.scss';
+
+.line-banner-aside {
+    display: block;
+    margin: 60px auto;
+}
+
+.line-banner-box {
+    display: flex;
+    word-break: keep-all;
+    text-align: center;
+}
+
+.line-banner-button {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 38.5px;
+    background-image: -webkit-gradient(linear,left top,right top,color-stop(-12%,#01a9fe),color-stop(37%,#2f5fef),color-stop(72%,#046afe),color-stop(110%,#00d2dd));
+    background-image: linear-gradient(90deg, #01a9fe -12%,#2f5fef 37%,#046afe 72%,#00d2dd 110%);
+
+    & svg {
+        margin-right: 15px;
+        margin-top: 5px;
+    }
+}
+
+/** max-width*/
+@media screen and (max-width: $narrowest) {
+    .line-banner-aside {
+        width: 100%;
+        margin-top: 18px;
+        margin-bottom: 40px;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .line-banner-button {
+        & svg {
+            width: 16px;
+            height: 16px;
+            margin-right: 7px;
+            margin-top: 2px;
+        }
+    }
+}
+
+
+/** min-width*/
+@media screen and (min-width: $narrowest) {
+    .line-banner-aside {
+        max-width: 1060px;
+        width: 90%;
+    }
+
+    .line-banner-button {
+        padding: 21px 30px;
+        font-size: 18px;
+        line-height: normal;    
+    }
+}
+
+@media screen and (min-width: $narrow) {
+    .line-banner-aside {
+        max-width: 1060x;
+        width: 87%;
+    }
+}

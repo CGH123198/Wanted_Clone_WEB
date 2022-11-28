@@ -1,0 +1,94 @@
+@import '../../../lib/styles/mediaQuery.scss';
+
+.data-box {
+    border-radius: 3px;
+    width: 100%;
+    height: 100%;
+}
+
+.data-image {
+    width: 100%;
+    height: 100%;
+    -o-object-position: center;
+    object-position: center;
+    z-index: 2;
+
+    & img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+    }
+}
+
+.data-text{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.data-text-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: normal;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    font-size: 18px;
+    line-height: 144.4%;
+    letter-spacing: -.0002em;
+}
+
+.data-text-description {
+    display: -webkit-box;
+    font-size: 13px;
+    line-height: 138.5%;
+    color: #939393;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: .025em;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+}
+
+.data-text-writer {
+    display: flex;
+    margin-top: 12px;
+
+    & img {
+        border-radius: 50%;
+        border: 1px solid #ececec;
+        width: 24px;
+        height: 24px;
+    }
+
+    & span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: .031em;
+        color: #888;
+        margin-left: 5px;
+        font-size: 12px;
+        line-height: 23px;
+    }
+}
+
+/** max-width */
+@media screen and (max-width: $narrowest) {
+    .data-text-title{
+        font-size: 14px;
+        font-weight: 400;
+    }
+}

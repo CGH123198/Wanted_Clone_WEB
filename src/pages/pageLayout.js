@@ -1,4 +1,5 @@
-import Header from '../components/header/header';
+import Header from '../components/common/header/header';
+import Footer from '../components/common/footer/footer';
 import  { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -13,6 +14,7 @@ const PageLayout = () => {
             <PageBodyDiv>
                 <Outlet />
             </PageBodyDiv>
+            <Footer/>
         </div>
     )
 }
