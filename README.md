@@ -21,3 +21,9 @@
     2. Footer(for common)
     3. JobFeedPage
         - dummy data
+
+## 2022. 11. 29
+    1. FourCardsSlide 구현
+    2. header - menu padding 수정.
+    3. LandingPage - category Slide => Swiper로 교체.
+    4. MainBannerCarousel -> 반응형 텍스트 박스 추가.

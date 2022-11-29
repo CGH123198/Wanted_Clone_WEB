@@ -7,28 +7,76 @@
     margin: 30px 0;
     max-width: 1050px;
     text-align: right;
+    height: 40px;
 }
 
 
-.category-slide {
+.swiper-container {
     width: 100%;
     overflow: hidden;
+}
+
+.swiper-slide {
+    width: 100px;
 }
 
 .category-list-item {
     min-width: 150px;
 }
 
-/** min-width */
-@media screen and (min-width: $narrowest) {
-    .category-scroll {
-        min-width: 100%;
-    }
+.slide-prev-button {
+    position: relative;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid #e1e2e3;
+    padding: 0 10px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .05);
+    height: 40px;
+    width: 40px;
+    margin-top: -19px;
+    margin-right: -8px;
+    z-index: 10;
 }
+
+.slide-next-button {
+    position: relative;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid #e1e2e3;
+    padding: 0 10px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .05);
+    margin-top: -19px;
+    margin-left: -10px;
+    z-index: 10;
+}
+
+.category-scroll .swiper-button-disabled {
+   opacity: 0 !important;
+}
+
 
 /** max-width */
 @media screen and (max-width: $narrowest) {
     .category-slide {
         height: 35px;
+    }
+
+    .slide-prev-button {
+        height: 35px;
+        display: none;
+    }
+
+    .slide-next-button {
+        height: 35px;
+        display: none;
+    }
+}
+
+
+/** min-width */
+@media screen and (min-width: $narrowest) {
+    .category-scroll {
+        min-width: 100%;
     }
 }

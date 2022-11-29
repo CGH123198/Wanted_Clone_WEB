@@ -1,4 +1,3 @@
-import { toFormData } from 'axios';
 import './careerInsightContent.scss';
 
 const CareerInsightContent = ({ data }) => {

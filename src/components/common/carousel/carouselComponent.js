@@ -1,15 +1,16 @@
 import './carouselStyle.scss';
-import MediaQuery from 'react-responsive';
 import { Autoplay, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { sizes } from '../../../lib/styles/mediaQuery.js';
-
 
 //추후에 page경로 따라 이미지와, text교체(location.pathname)
-const CarouselComponent = () => {
-
+const CarouselComponent = ({ data }) => {
+    const navigationPrevRef = useRef(null);
+    const navigationNextRef = useRef(null);
+    console.log(data);
     return (
         <div className='carousel-box'>
             <Swiper
@@ -21,49 +22,49 @@ const CarouselComponent = () => {
                 centeredSlides={true}
                 loop={true}
                 autoplay={{ delay: 5000 }}
-                navigation
+                navigation={{
+                    prevEl: navigationPrevRef.current,
+                    nextEl: navigationNextRef.current,
+                }}
+                onBeforeInit={(swiper) => {
+                    swiper.params.navigation.prevEl = navigationPrevRef.current;
+                    swiper.params.navigation.nextEl = navigationNextRef.current;
+                }}
                 style={{ maxWidth: "1350px", overflow: "visible" }}
             >
-                <SwiperSlide>
-                    <div className="content-box" >
-                        <div className="image-box">
-                            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1894%2Fa5f6eeca.jpg&amp;w=1060&amp;q=100" alt="글로벌 회사들의 전략과 리더십 고민"/>
-                        </div>
-                        <MediaQuery minWidth={sizes.narrow}>
-                            <h1>AAA</h1>
-                        </MediaQuery>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="content-box">
-                        <div className="image-box">
-                            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1895%2F82a7ee0d.thumb_1006_280.jpg&amp;w=1060&amp;q=100" alt="유니콘기업 리디, 전 직군 채용" />
-                        </div>
-                        <MediaQuery minWidth={sizes.narrow}>
-                            <h1>AAA</h1>
-                        </MediaQuery>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="content-box">
-                        <div className="image-box">
-                            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1842%2F356a7eb1.thumb_1006_280.jpg&amp;w=1060&amp;q=100" alt="벤처기업협회 추천기업 공동채용" />
-                        </div>
-                        <MediaQuery minWidth={sizes.narrow}>
-                            <h1>AAA</h1>
-                        </MediaQuery>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="content-box">
-                        <div className="image-box">
-                            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1897%2Feb6f5ccd.jpg&w=1060&q=100" alt="유니콘기업 리디, 전 직군 채용" />
-                        </div>
-                        <MediaQuery minWidth={sizes.narrow}>
-                            <h1>AAA</h1>
-                        </MediaQuery>
-                    </div>
-                </SwiperSlide>
+                {
+                    data &&
+                    data.map( elem => {
+                        return (
+                            <SwiperSlide>
+                                <div className="content-box" >
+                                    <div className="image-box">
+                                        <img src={elem.img} alt={elem.info[0]} />
+                                    </div>
+                                    <div className="banner-information">
+                                        <h2>{elem.info[0]}</h2>
+                                        <h3>{elem.info[1]}</h3>
+                                        <hr className="divider-root" />
+                                        <Link to="#" className="detail-link" >
+                                            <span>바로가기</span>
+                                            <span>
+                                                <span >
+                                                    <svg viewBox="0 0 18 18"><path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path></svg>
+                                                </span>
+                                            </span>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        );
+                    })
+                }
+                <button type="button" className="swiper-button-prev" ref={navigationPrevRef}>
+                    <svg viewBox="0 0 18 18"><path d="m6.045 9 5.978-5.977a.563.563 0 1 0-.796-.796L4.852 8.602a.562.562 0 0 0 0 .796l6.375 6.375a.563.563 0 0 0 .796-.796L6.045 9z"></path></svg>
+                </button>
+                <button type="button" className="swiper-button-next" ref={navigationNextRef}>
+                    <svg viewBox="0 0 18 18"><path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path></svg>
+                </button>
             </Swiper>
         </div>
     )

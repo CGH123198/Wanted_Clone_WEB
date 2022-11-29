@@ -17,6 +17,10 @@ const HeaderWrap = styled.div`
 
 const Li = styled.li`
     box-shadow: ${ props => props.blue ? "inset 0 -2px #258bf7" : "none" };
+
+    &:hover {
+        box-shadow: ${ props => props.blue ? "inset 0 -2px #258bf7" : "inset 0 -2px #e1e2e3" };
+    }
 `;
 
 const Header = () => {
@@ -70,11 +74,11 @@ const Header = () => {
                             <Li blue={location.pathname === "/jobsfeed"}><Link to="/jobsfeed">채용</Link></Li>
                             <Li><Link to="#">이벤트</Link></Li>
                         <MediaQuery minWidth={sizes.narrowest}>
-                            <Li><Link to="#">직군별 연봉</Link></Li>
-                            <Li><Link to="#">이력서</Link></Li>
-                            <Li><Link to="#" className="new">커뮤니티</Link></Li>
-                            <Li><Link to="#">프리랜서</Link></Li>
-                            <Li><Link to="#"className="beta">AI합격예측</Link></Li>
+                            <Li blue={false}><Link to="#">직군별 연봉</Link></Li>
+                            <Li blue={false}><Link to="#">이력서</Link></Li>
+                            <Li blue={false}><Link to="#" className="new">커뮤니티</Link></Li>
+                            <Li blue={false}><Link to="#">프리랜서</Link></Li>
+                            <Li blue={false}><Link to="#"className="beta">AI합격예측</Link></Li>
                         </MediaQuery>
                     </ul>
                     <aside className="aside-search-box">

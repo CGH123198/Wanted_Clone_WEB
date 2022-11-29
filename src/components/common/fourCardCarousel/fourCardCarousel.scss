@@ -1,0 +1,151 @@
+@import '../../../lib/styles/mediaQuery.scss';
+
+.swiper-container {
+    max-width: 1030px;
+    width: 90vw;
+    margin-bottom: 0px;
+}
+
+.swiper-slide {
+    width: 22%;
+}
+
+.job-card {
+    width: 100%;
+    height: 100%;
+}
+
+.job-card-body {
+    margin-top: -20px;
+}
+
+.job-card-position {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    position: relative;
+    color: #333;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.2;
+    max-height: 2.2em;
+    overflow: hidden;
+    text-align: left;
+    word-break: break-word;
+}
+
+.job-card-company {
+    font-size: 14px;
+    line-height: normal;
+    text-align: left;
+    word-break: break-word;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.job-card-location {
+    font-weight: 400;
+    color: #999;
+    font-size: 14px;
+    line-height: normal;
+    text-align: left;
+    word-break: break-word;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 7px;
+}
+
+.job-card-reward {
+    margin-top: 10px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    word-break: break-word;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+.swiper-button-prev {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #e1e2e3;
+    background-color: white;
+    border-radius: 50%;
+
+    &::after {
+        display: none;
+    }
+}
+
+.swiper-button-next {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #e1e2e3; 
+    background-color: white;
+    border-radius: 50%;
+
+    &::after {
+        display: none;
+    }
+}
+
+.four-card-carousel {
+    position: abolute;
+    top: 35px;
+}
+
+/** max-width */
+@media screen and (max-width: $narrowest) {
+    .swiper-container {
+        height: 60vw;
+        min-height: 350px;
+        max-height: 500px;
+    }
+
+    .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+    }
+
+    .swiper-button-next {
+        width: 30px;
+        height: 30px;
+    }
+
+    .job-card-position {
+        font-size: 14px;
+    }
+
+    .job-card-company {
+        font-size: 11px;
+    }
+}
+
+/** min-width */
+@media screen and (min-width: $narrowest) {
+    .swiper-container {
+        height: 32vw;
+        max-height: 400px;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (min-width: $narrower) {
+}
+
+@media screen and (min-width: $narrow) {
+    .swiper-container {
+        height: 40vh;
+        max-height: 350px;
+    }
+}

@@ -51,16 +51,10 @@
     font-weight: 500;
     height: 50px;
 
-    & li::after {
-        content:'';
-        height: 100%;
-        width: 10px;
-        display: inline-block;
-        vertical-align: middle;
-    }
-
     & li {
         text-align: center;
+        padding: 20px 13px;
+        vertical-align: middle;
     }
 }
 
@@ -144,7 +138,8 @@
 
     .menu-className {
         & li {
-            padding: 11px 0 19px 8px;
+            padding-right: 12px;
+            padding-left: 12px;
         }
     }
 
@@ -168,6 +163,16 @@
     }
 }
 
+@media screen and (max-width: $narrow) {
+    .menu-className {
+        & li {
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+    }
+}
+
+
 @media screen and (min-width: $narrowest) {
     .menu-className { 
         font-size: 12px;
@@ -175,23 +180,6 @@
 }
 
 @media screen and (min-width: $narrower) {
-    .menu-className { 
-        li::after {
-            content:'';
-            height: 100%;
-            width: 1px;
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        li {
-            padding-left: 10px;
-            padding-right: 7px;
-            margin-right: 16px;
-            margin-top: 7px;
-        }
-    }
-
     .main-header-box {
         width: 93.5%;
     }
@@ -216,8 +204,6 @@
     .menu-className { 
         font-size: 13px;
         
-        & li:first-child {
-            margin-left: 30px;
-        }
+
     }
 }
