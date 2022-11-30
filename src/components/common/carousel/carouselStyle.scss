@@ -115,6 +115,13 @@
         margin-right: -1px;
         margin-left: 2px;
     }
+
+    & svg {
+        margin: 4px 0 0 -28px;
+        fill: #36f;
+        width: 14px;
+        height: 14px;
+    }
 }
 
 
@@ -144,7 +151,9 @@
     .carousel-box .swiper-slide-next .banner-information, 
     .carousel-box .swiper-slide-prev .banner-information {
         opacity: 0;
+        transition-delay: -.5s;
     }
+
     .banner-information {
         position: absolute;
         bottom: 28px;
@@ -156,6 +165,7 @@
         text-align: left;
         left: 34px;
         transition:.5s;
+        
 
         & h2 {
             margin-left: 20px;

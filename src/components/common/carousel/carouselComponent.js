@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 const CarouselComponent = ({ data }) => {
     const navigationPrevRef = useRef(null);
     const navigationNextRef = useRef(null);
-    console.log(data);
+    
     return (
         <div className='carousel-box'>
             <Swiper

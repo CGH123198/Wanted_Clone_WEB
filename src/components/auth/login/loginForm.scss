@@ -1,0 +1,129 @@
+@import '../../../lib/styles/mediaQuery.scss';
+
+form {
+    h1 {
+        color: #000;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: -0.024em;
+        line-height: 38px;
+        font-size: 27px;
+    }
+
+    h2 {
+        color: #888;
+        font-weight: 400;
+        text-align: center;
+        letter-spacing: 0.0096em;
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+.or-social-login {
+    color: #939393;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.025rem;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.social-login-kakao {
+    border: 0;
+    border-radius: 15px;
+    width: 100%;
+    color: #181600;
+
+    background-color: #FEE500;
+    & svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    & svg path {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.login-modal-divider {
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid #e1e2e3;
+    margin-top: 40px;
+    margin-bottom: 40px
+}
+
+.login-modal-bottom {
+    margin: 30px auto 15px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &>a {
+        color: #767676;
+        font-weight: 400;
+        text-align: center;
+        letter-spacing: 0.0192em;
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    &>a:first-child {
+        margin-right: 12px;
+    }
+}
+
+.company-typography {
+    color: #888;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.025em;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 30px;
+}
+
+.login-lang-select {
+    cursor: pointer;
+    height: 50px;
+    min-height: 50px;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #e1e2e3;
+    background-color: white;
+    margin: 0 auto 10px;
+    position: relative;
+    height: 34px;
+    min-height: 34px;
+    max-width: 140px;
+
+    & img {
+        position: absolute;
+        left: 15px;
+        top: 9px;
+        width: 23px;
+        height: 16px;
+        border-radius: 2px;
+        z-index: 1;
+        border: 1px solid #e1e2e3;
+    }
+
+    & select {
+        padding-left: 12px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        appearance: none;
+        height: 100%;
+        border: none;
+        background: none;
+        z-index: 1;
+        font-size: 16px;
+        color: #333;
+        padding-left: 45px;
+        font-weight: 400;       
+    }
+}

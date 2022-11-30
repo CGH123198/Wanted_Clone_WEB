@@ -1,0 +1,124 @@
+@import '../../lib/styles/mediaQuery.scss';
+
+.modal-container {
+    border-radius: 5px;
+    width: 100%;
+    max-height: calc(100vh - 100px);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: #e1e2e3;
+}
+
+.modal-window {
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+    max-height: calc(100vh - 100px);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border : 1px solid #e1e2e3;
+}
+
+.modal-header {
+    padding: 0 20px;
+    box-sizing: border-box;
+    height: 64px;
+    flex: none;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.modal-header-left {
+    min-width: 64px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.modal-header-center {
+    display: flex;
+    flex: 1;
+    flex-basis: 0%;
+    justify-content: center;
+    align-items: center;
+
+    & span {
+        display: flex;
+        align-items: inherit;
+        justify-content: inherit;
+        width: 140px;
+    }
+
+    & p {
+        color: #000;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: -0.002em;
+        font-size: 18px;
+        line-height: 26px;
+        display: flex;
+        flex: 1 1 0%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & svg {
+        fill: #333;
+        width: 140px;
+        height: 17px;
+    }
+}
+
+.modal-header-right {
+    display: flex;
+    min-width: 64px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.modal-body {
+    overflow: auto;
+    position: relative;
+    padding: 20px;
+    scrollbar-width: none;
+}
+
+.email-label {
+    margin: 17px 0px 7px;
+
+    & label {
+        color: #888;
+        font-weight: 600;
+        text-align: left;
+        letter-spacing: 0.0145em;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+/** max-width */
+
+@media screen and (max-width: $narrowest) {
+    .modal-window {
+        border-radius: 0px;
+        border: none;
+        max-height: 100%;
+        height: 100%;
+    }
+
+    .modal-header {
+        height: 56px;
+    }
+
+    .modal-container {
+        max-height: 100%;
+        height: 100%;
+    }
+}

@@ -23,7 +23,11 @@
         - dummy data
 
 ## 2022. 11. 29
-    1. FourCardsSlide 구현
+    1. FourCardCarousel 구현
     2. header - menu padding 수정.
     3. LandingPage - category Slide => Swiper로 교체.
     4. MainBannerCarousel -> 반응형 텍스트 박스 추가.
+
+## 2022. 11. 30
+    1. TwoCardCarousel 구현
+    2. 리팩토링 - TwoCardCarousel, FourCardCarousel - data 분리.

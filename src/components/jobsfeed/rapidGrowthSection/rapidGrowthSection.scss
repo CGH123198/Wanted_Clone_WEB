@@ -1,0 +1,14 @@
+@import '../../../lib/styles/mediaQuery.scss';
+
+.company-tag {
+    position: relative;
+    max-width: 1060px;
+}
+
+/** min-width */
+@media screen and (min-width: $narrow) {
+    .company-tag {
+        margin: 0 auto;
+        width: 87.72%;
+    }
+}

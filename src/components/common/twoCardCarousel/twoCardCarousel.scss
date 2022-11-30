@@ -1,0 +1,152 @@
+@import '../../../lib/styles/mediaQuery.scss';
+
+.swiper-container {
+    max-width: 1030px;
+    width: 90vw;
+    margin-bottom: 0px;
+}
+
+.swiper-button-prev {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #e1e2e3;
+    background-color: white;
+    border-radius: 50%;
+
+    &::after {
+        display: none;
+    }
+}
+
+.swiper-button-next {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #e1e2e3; 
+    background-color: white;
+    border-radius: 50%;
+
+    &::after {
+        display: none;
+    }
+}
+
+.two-card-carousel {
+    position: abolute;
+    top: 35px;
+    margin-top: 10px;
+}
+
+.card-body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 17px;
+}
+
+.card-body-flexbox {
+    display: flex;
+    flex: 1 0;
+}
+
+.card-body-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.card-body-info-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    word-break: break-all;
+}
+
+.card-body-info-location {
+    font-size: 14px;
+    font-weight: 500;
+    color: #999;
+}
+
+.follow-button {
+    border: 1px solid #e1e2e3;
+    padding: 12px 25.5px 11px;
+    line-height: 1;
+    height: 40px;
+    font-size: 15px;
+    color: #36f;
+    background-color: #fff;
+    border: 1px solid #e1e2e3;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    min-width: 64px;
+    padding: 0 27px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    font-weight: 700;
+
+    &:hover {
+    border: 1px solid #36f;
+
+    }
+
+    & span {
+        width: 100%;
+        font-size: inherit;
+        font-weight: inherit;
+        display: inherit;
+        -ms-flex-align: inherit;
+        align-items: inherit;
+        -ms-flex-pack: inherit;
+        justify-content: inherit;
+        color: inherit;
+    }
+}
+
+/** max-width */
+@media screen and (max-width: $narrowest) {
+    .swiper-container {
+        height: 60vw;
+        min-height: 350px;
+        max-height: 500px;
+    }
+
+    .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+    }
+
+    .swiper-button-next {
+        width: 30px;
+        height: 30px;
+    }
+
+    .card-body-info-title {
+        font-size: 16px;
+    }
+
+    .card-body-info-location {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .follow-button {
+        height: 35px;
+        font-size: 14px;
+        padding: 9px 20px 8px;
+    }
+}
+
+/** min-width */
+
+@media screen and (min-width: $narrow) {
+    .swiper-container {
+        height: 40vh;
+        max-height: 540px;
+    }
+}

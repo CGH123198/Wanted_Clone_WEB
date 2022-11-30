@@ -2,6 +2,7 @@ import MainBannerCarouselContainer from '../../components/jobsfeed/mainBannerCar
 import LineBannerButton from '../../components/jobsfeed/lineBannerButton/lineBannerbutton';
 import MatchedJobSection from '../../components/jobsfeed/matchedJobSection/matchedJobSection';
 import NavShorcut from '../../components/jobsfeed/navShortcut/navShorcut';
+import RapidGrowthSection from '../../components/jobsfeed/rapidGrowthSection/rapidGrowthSection';
 
 const JobsFeedPage = () => {
     return (
@@ -10,6 +11,7 @@ const JobsFeedPage = () => {
             <LineBannerButton />
             <MatchedJobSection />
             <NavShorcut />
+            <RapidGrowthSection />
         </>
     )
 }
