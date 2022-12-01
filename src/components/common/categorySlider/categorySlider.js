@@ -1,5 +1,4 @@
 import './categorySlider.scss';
-import MediaQuery from 'react-responsive';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useRef, useState } from 'react';
@@ -27,12 +26,7 @@ const CategoryModalButton = styled.button`
     }
 `;
 
-const CategorySlider = () => {
-    const categories = [ 
-        "IT/기술", "취업/이직", "인간관계", "리더십", "개발", "MD",
-        "UX/UI", "데이터", "콘텐츠 제작", "노무", "서비스기획", "경영/전략", "디자인", "HR",
-        "마케팅", "조직문화", "회사생활", "커리어고민", "라이프스타일", "브랜딩"
-    ]
+const CategorySlider = ({ data }) => {
 
     const [clicked, setClicked] = useState(0);
     const [openModal, setOpenModal] = useState(false);
@@ -75,9 +69,9 @@ const CategorySlider = () => {
                 }}
             >
                 {
-                    categories.map( (category, index) =>
+                    data.map( (data, index) =>
                     <SwiperSlide style={{ width: "auto"}}>
-                        <Category category={category} clicked={clicked} getIndex={getIndex} index={index} /> 
+                        <Category category={data} clicked={clicked} getIndex={getIndex} index={index} /> 
                     </SwiperSlide>
                     )
                 }

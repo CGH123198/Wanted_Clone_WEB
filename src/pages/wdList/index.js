@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import CategoryNav from '../../components/wdList/categoryNav/categoryNav';
+import JobListContentWrapper from '../../components/wdList/jobListContentWrapper/jobListContentWrapper';
 
 const WdListWrap = styled.div`
     background-color: #fff;
@@ -11,6 +12,7 @@ const WdListPage = () => {
     return (
         <WdListWrap>
             <CategoryNav />
+            <JobListContentWrapper />
         </WdListWrap>
     )
 }

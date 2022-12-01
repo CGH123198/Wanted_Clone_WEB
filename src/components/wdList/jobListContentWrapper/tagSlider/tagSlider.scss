@@ -1,0 +1,28 @@
+@import '../../../../lib/styles/mediaQuery.scss';
+
+.tag-list-slider {
+    white-space: nowrap;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+.tag-list-scroll-narrowest {
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
+
+/** max-width */
+
+@media screen and (max-width: $narrowest) {
+    .tag-list-slider {
+        margin-left: 0;
+    }
+
+    .tag-list-scroll-narrowest {
+        margin: 15px 0 0;
+    }
+}

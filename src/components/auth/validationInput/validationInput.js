@@ -105,7 +105,7 @@ const ValidationInput = ({ id, type}) => {
                         validation={valid}
                         value={value}
                         placeholder="비밀번호를 입력해주세요."
-                        onChangeValue={onChangeValue}
+                        onChange={onChangeValue}
                         type={type}
                     />
                     {

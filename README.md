@@ -31,3 +31,9 @@
 ## 2022. 11. 30
     1. TwoCardCarousel 구현
     2. 리팩토링 - TwoCardCarousel, FourCardCarousel - data 분리.
+    3. authForm - login 아이디 입력 창, password 입력 창,
+
+## 2022. 12. 01
+    1. WdListPage 
+        - tagSlider 구현 반응형
+        - tagData 입력
