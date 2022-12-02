@@ -1,9 +1,9 @@
 @import '../../../../lib/styles/mediaQuery.scss';
-
+///////////scrollX
 .tag-list-slider {
     white-space: nowrap;
     padding-bottom: 10px;
-    padding-right: 20px;
+    padding-right: 0px;
     max-width: 1060px;
     margin: 0 auto;
 }
@@ -15,6 +15,22 @@
     padding-right: 20px;
 }
 
+//////////////////////carousel
+.tag-slider-wdlist {
+    display: none;
+    max-width: 1060px;
+    width: 97%;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+.tag-list-slider .swiper-slide {
+    width: auto;
+}
+
+.slide-prev-button-wdlist, .slide-next-button-wdlist {
+    display: none;
+}
 /** max-width */
 
 @media screen and (max-width: $narrowest) {
@@ -26,3 +42,15 @@
         margin: 15px 0 0;
     }
 }
+
+/** min-width */
+@media screen and (min-width: $narrowest) {
+    .tag-list-slider {
+        display: flex;
+    }
+
+    .tag-slider-wdlist {
+        display: block;
+    }
+}
+

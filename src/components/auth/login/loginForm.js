@@ -60,6 +60,7 @@ const LoginForm = ({onSubmit}) => {
                             <option value="en_US">English</option>
                             <option value="ja">日本語</option>
                         </select>
+                        <div className="login-lang-select-arrow"><span><svg viewBox="0 0 10 6"><path fillRule="evenodd" clipRule="evenodd" d="M5 3.93934L1.28033 0.21967C0.987437 -0.0732233 0.512563 -0.0732233 0.21967 0.21967C-0.0732233 0.512563 -0.0732233 0.987437 0.21967 1.28033L4.46967 5.53033C4.76256 5.82322 5.23744 5.82322 5.53033 5.53033L9.78033 1.28033C10.0732 0.987437 10.0732 0.512563 9.78033 0.21967C9.48744 -0.0732233 9.01256 -0.0732233 8.71967 0.21967L5 3.93934Z" fill="#333"></path></svg></span></div>
                     </div>
                 </form>
             </div>

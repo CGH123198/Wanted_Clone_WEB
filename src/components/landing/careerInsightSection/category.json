@@ -1,0 +1,82 @@
+[ 
+    {
+        "tagId": "0",
+        "tagName": "IT/기술"
+    },
+    {
+        "tagId": "1",
+        "tagName": "취업/이직"
+    },
+    {
+        "tagId": "2",
+        "tagName": "인간관계"
+    },
+    {
+        "tagId": "3",
+        "tagName": "리더십"
+    },
+    {
+        "tagId": "4",
+        "tagName": "개발"
+    },
+    {
+        "tagId": "5",
+        "tagName": "MD"
+    },
+    {
+        "tagId": "6",
+        "tagName": "데이터"
+    },
+    {
+        "tagId": "7",
+        "tagName": "콘텐츠 제작"
+    },
+    {
+        "tagId": "8",
+        "tagName": "UX/UI"
+    }, 
+    {
+        "tagId": "9",
+        "tagName": "노무"
+    }, 
+    {
+        "tagId": "10",
+        "tagName": "서비스기획"
+    }, 
+    {
+        "tagId": "11",
+        "tagName": "경영/전략"
+    }, 
+    {
+        "tagId": "12",
+        "tagName": "디자인"
+    }, 
+    {
+        "tagId": "13",
+        "tagName": "HR"
+    }, 
+    {
+        "tagId": "14",
+        "tagName" : "마케팅"
+    }, 
+    {
+        "tagId": "15",
+        "tagName" : "조직문화"
+    }, 
+    {
+        "tagId": "16",
+        "tagName" : "회사생활"
+    }, 
+    {
+        "tagId": "17",
+        "tagName" : "커리어고민"
+    },
+    {
+        "tagId": "18",
+        "tagName" : "라이프스타일"
+    }, 
+    {
+        "tagId": "19",
+        "tagName" : "브랜딩"
+    } 
+]

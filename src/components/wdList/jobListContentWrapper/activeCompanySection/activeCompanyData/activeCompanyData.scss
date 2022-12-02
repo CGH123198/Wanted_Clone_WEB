@@ -1,0 +1,83 @@
+@import '../../../../../lib/styles/mediaQuery.scss';
+
+
+.active-company-data {
+    min-height: 1px;
+    outline: none;
+    width: 220px;
+    overflow: hidden;
+    cursor: pointer;
+
+    & header {
+        z-index: 1;
+        border-radius: 3px 3px 0 0;
+        overflow: hidden;
+        margin: 0 9px;
+        height: 147px;
+    }
+
+    & footer{
+        box-sizing: border-box;
+        margin: 0 9px;
+        padding: 34px 16px 0;
+        height: 130px;
+        border: 1px solid #e1e2e3;
+        border-top: none;
+        border-radius: 0 0 3px 3px;
+        position: relative;
+    }
+
+    & footer h4 {
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        position: relative;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: -.3px;
+        color: #333;
+        line-height: 1.2;
+        margin: 4px 0;
+        overflow: hidden;
+        max-height: 58px;
+
+    }
+
+    & footer h5 {
+        color: #999;
+        margin-top: 6px;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: -.2px;
+    }
+}
+
+
+/** max-width */
+@media screen and (max-width: $narrower) {
+    .active-company-data {
+        & header {
+            height: 120px;
+        }
+
+        & footer{
+            max-height: 110px;
+        }
+    }
+}
+
+@media screen and (max-width: $narrowest) {
+    .active-company-data {
+        width: 155px !important;
+        min-width: 155px;
+
+        & header {
+            height: 100px;
+        }
+
+        & footer{
+            max-height: 110px;
+        }
+    }
+}

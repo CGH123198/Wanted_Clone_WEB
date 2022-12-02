@@ -1,8 +1,9 @@
 import CareerInsightList from "./careerInsightList";
+import data from '../careerInsightContent/careerInsightData.json';
 
 const CareerInsightListContainer = () => {
     return(
-        <CareerInsightList />
+        <CareerInsightList careerData={data}/>
     )
 }
 

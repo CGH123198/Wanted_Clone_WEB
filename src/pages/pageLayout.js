@@ -4,7 +4,7 @@ import  { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 
 const PageBodyDiv= styled.div`
-    margin: 55px auto 0;
+    margin: 50px auto 0;
 `;
 
 const PageLayout = () => {

@@ -1,0 +1,29 @@
+@import '../../../lib/styles/mediaQuery.scss';
+
+.bookmark-job-list {
+    margin: -10px;
+    padding: 0;
+}
+
+.empty-message-container {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.custom-message {
+    margin: 240px 0;
+    color: #d1d1d1;
+    font-size: 24px;
+}
+
+/** max-width */
+
+@media screen and (max-width: $narrowest) {
+    .bookmark-list {
+        overflow-x: hidden;
+    }
+
+    .empty-message-container {
+        padding: 140px 0;
+    }
+}

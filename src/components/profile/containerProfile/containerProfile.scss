@@ -1,0 +1,73 @@
+@import '../../../lib/styles/mediaQuery.scss';
+
+.container-profile {
+    position: relative;
+    max-width: 1060px;
+    margin: 0 auto;
+    min-height: 57.2vh;
+}
+
+.nav-profile {
+    position: relative;
+    line-height: normal;
+
+    & h2 p {
+        font-size: 20px;
+        font-weight: 700;
+        color: #333;
+        padding: 50px 0 20px;
+    }
+}
+
+.nav-profile-button {
+    display: none;
+    width: 100vw;
+    border-left: 0;
+    position: relative;
+    left: -25px;
+    border-top: 1px solid rgba(0,0,0,.1);
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    cursor: pointer;
+}
+
+/** max-width */
+@media screen and (max-width: $narrowest) {
+    .container-profile {
+        & h2 p {
+            display: none;
+        }
+    }
+
+    .nav-profile-button {
+        display: block;
+        padding: 30px;
+        color: #333;
+        font-size: 18px;
+        text-align: left;
+        font-weight: 600;
+        background-color: #fff;
+        border-bottom: 1px solid #e1e2e3;
+    }
+}
+
+@media screen and (max-width: $narrower) {
+    .container-profile {
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: $narrow) {
+    .container-profile {
+        padding-bottom: 100px;
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+/** min-width */
+@media screen and (min-width: $narrow) {
+    .container-profile {
+        padding-bottom: 100px;
+        margin: 0 auto;
+        width: 87.72%;
+    }
+}

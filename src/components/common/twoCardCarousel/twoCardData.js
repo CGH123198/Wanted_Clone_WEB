@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { sizes } from '../../../lib/styles/mediaQuery';
 
 const Header = styled.header`
@@ -31,21 +32,72 @@ const CardBodyImg = styled.img`
     }
 `;
 
+const FollowButton = styled.button`
+    border: 1px solid #e1e2e3;
+    padding: 12px 25.5px 11px;
+    line-height: 1;
+    height: 40px;
+    font-size: 15px;
+    color: ${ props => props.follow ? "#ccc" : "#36f" };
+    background-color: ${ props => props.follow ? "#f2f4f7" : "#fff" };
+    border: 1px solid ${ props => props.follow ? "none" : "#e1e2e3" };
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    min-width: 64px;
+    padding: 0 27px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    font-weight: 700;
 
-const TwoCardData = ({ elem }) => {
+    &:hover {
+        border: 1px solid ${ props => props.follow ? "none" : "#36f" };;
+    }
+
+    & span {
+        width: 100%;
+        font-size: inherit;
+        font-weight: inherit;
+        display: inherit;
+        align-items: inherit;
+        justify-content: inherit;
+        color: inherit;
+    }
+
+    @media screen and (max-width: ${sizes.narrowest}px) {
+        height: 35px;
+        font-size: 14px;
+        padding: 9px 20px 8px;
+    }
+`;
+
+
+const TwoCardData = ({ data }) => {
+    const [follow, setFollow] = useState(false);
+
+    const isFollow = () => {
+        follow ?
+        setFollow(false) :
+        setFollow(true);
+    }
+
     return (
         <div className="job-card">
             <Link to="#">
-                <Header img={elem.img} />  
+                <Header img={data.img} />  
                 <div className="card-body">
                     <div className="card-body-flexbox">
-                        <CardBodyImg img={elem.cardImg} />
-                        <p className="card-body-info-title">{elem.title}</p>
-                        <p className="card-body-info-location">{elem.location}</p>
+                        <CardBodyImg img={data.cardImg} />
+                        <div className="card-body-info">
+                            <p className="card-body-info-title">{data.title}</p>
+                            <p className="card-body-info-location">{data.location}</p>
+                        </div>
                     </div> 
-                    <button type="button" className="follow-button" >
+                    <FollowButton type="button" onClick={isFollow} follow={follow}>
                         <span>팔로우</span>
-                    </button>   
+                    </FollowButton>   
                 </div> 
             </Link>
         </div>

@@ -12,7 +12,7 @@ const HeaderWrap = styled.div`
     box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
     width: 100%;
     color: black;
-    z-index: 10;
+    z-index: 100;
 `;
 
 const Li = styled.li`

@@ -8,6 +8,7 @@ import { sizes } from '../../../lib/styles/mediaQuery.js';
 import Category from './category';
 import styled from 'styled-components';
 
+
 const CategoryModalButton = styled.button`
     background-color: ${ props => props.modal ? "#36f" : "white"};
     border: 1px solid #e1e2e3;
@@ -28,8 +29,9 @@ const CategoryModalButton = styled.button`
 
 const CategorySlider = ({ data }) => {
 
-    const [clicked, setClicked] = useState(0);
+    
     const [openModal, setOpenModal] = useState(false);
+    
 
     const navigationPrevRef = useRef(null);
     const navigationNextRef = useRef(null);
@@ -38,10 +40,6 @@ const CategorySlider = ({ data }) => {
         openModal ?
         setOpenModal(false) :
         setOpenModal(true);
-    }
-
-    const getIndex = key => {
-       setClicked(key);
     }
 
     return (
@@ -59,6 +57,7 @@ const CategorySlider = ({ data }) => {
                 slidesPerView="auto"
                 loop={false}
                 slidesPerGroup={4}
+                allowTouchMove={false}
                 navigation={{
                     prevEl: navigationPrevRef.current,
                     nextEl: navigationNextRef.current,
@@ -69,9 +68,10 @@ const CategorySlider = ({ data }) => {
                 }}
             >
                 {
-                    data.map( (data, index) =>
+                    data &&
+                    data.map( (data) =>
                     <SwiperSlide style={{ width: "auto"}}>
-                        <Category category={data} clicked={clicked} getIndex={getIndex} index={index} /> 
+                        <Category category={data} /> 
                     </SwiperSlide>
                     )
                 }

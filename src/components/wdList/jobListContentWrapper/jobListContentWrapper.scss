@@ -15,6 +15,11 @@
     flex-shrink: 0;
 }
 
+.joblist-content-divier-length-limit {
+    max-width: 1060px;
+    margin: 25px auto;
+}
+
 /** max-width */ 
 @media screen and (max-width: $narrowest) {
     .joblist-contentwrapper {
@@ -26,11 +31,19 @@
     }
 }
 
+@media screen and (max-width: $narrow) {
+    
+}
+
 /** min-width */
-@media screen and (min-width: $narrow) {
+@media screen and (min-width: $narrowest) {
     .joblist-contentwrapper {
         margin: 0 auto;
         padding: 20px 0 80px;
         width: 87.72%
+    }
+
+    .joblist-content-divier-length-limit {
+        width: 100%;
     }
 }

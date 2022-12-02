@@ -1,12 +1,11 @@
-import CareerInsightContent from "./careerInsightContent";
+import CareerInsightContent from "../careerInsightContent/careerInsightContent";
 import './careerInsightList.scss';
-import CareerContent from './careerContentData.json';
 import { useState } from 'react';
 
-const CareerInsightList = () => {
+const CareerInsightList = ({ careerData }) => {
     const [isClicked, setIsClicked] = useState(0);
     const [moreContent, setMoreContent] = useState(false);
-    const REST_CONTENT = CareerContent.length - 4;
+    const REST_CONTENT = careerData.length - 4;
 
     const moreContents = () => {
         if(isClicked === 1) { 
@@ -22,7 +21,7 @@ const CareerInsightList = () => {
         <div>
             <ul className="career-insight-list">
                 {
-                    CareerContent.map( (elem, index) => {
+                    careerData.map( (elem, index) => {
                         if(index < 4) {
                             return (
                                 <li className="card-section">
@@ -34,7 +33,7 @@ const CareerInsightList = () => {
                 }
                 {
                     moreContent &&
-                    CareerContent.slice(CareerContent.length - REST_CONTENT).map(elem => {
+                    careerData.slice(careerData.length - REST_CONTENT).map(elem => {
                         return (
                             <li className="card-section">
                                 <CareerInsightContent data={elem} />

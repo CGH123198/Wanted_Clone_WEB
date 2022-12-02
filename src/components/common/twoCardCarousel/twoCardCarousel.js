@@ -1,41 +1,12 @@
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useRef } from 'react';
-import { Link } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import styled from 'styled-components';
-import { sizes } from '../../../lib/styles/mediaQuery';
 import './twoCardCarousel.scss';
 
-const Header = styled.header`
-    background-image: url(${props => props.img});
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 3px;
-    height: 70%;
-    width: 100%;
-`;
+import TwoCardData from './twoCardData';
 
-
-const CardBodyImg = styled.img`
-    background-image: url(${props => props.img});
-    width: 42px;
-    height: 42px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 10%);
-    background-size: contain;
-    background-position: 50%;
-    margin-right: 12px;
-    background-repeat: no-repeat;
-
-    @media screen and (max-width: ${sizes.narrowest}px) {
-        width: 36px;
-        height: 36px;
-        margin-right: 10px;
-    }
-`;
 
 const TwoCardCarousel = ({data}) => {
     const navigationPrevRef = useRef(null);
@@ -70,23 +41,7 @@ const TwoCardCarousel = ({data}) => {
                 data.map(elem => {
                     return (
                         <SwiperSlide className='swiper-item'>
-                            <div className="job-card">
-                                <Link to="#">
-                                    <Header img={elem.img} />  
-                                    <div className="card-body">
-                                        <div className="card-body-flexbox">
-                                            <CardBodyImg img={elem.cardImg} />
-                                            <div className="card-body-info">
-                                                <p className="card-body-info-title">{elem.title}</p>
-                                                <p className="card-body-info-location">{elem.location}</p>
-                                            </div>
-                                        </div> 
-                                        <button type="button" className="follow-button" >
-                                            <span>팔로우</span>
-                                        </button>   
-                                    </div> 
-                                </Link>
-                            </div>
+                            <TwoCardData data={elem} />
                         </SwiperSlide>
                     )
                 })

@@ -1,9 +1,9 @@
 import tag from './tags.json';
 import TagSlider from './tagSlider';
 
-const TagSliderContainer = () => {
+const TagSliderContainer = ({ scrollPosition }) => {
     return (
-        <TagSlider data={tag} />
+        <TagSlider data={tag} scrollPosition={scrollPosition} />
     )
 }
 

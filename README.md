@@ -37,3 +37,16 @@
     1. WdListPage 
         - tagSlider 구현 반응형
         - tagData 입력
+
+## 2022. 12. 02
+    1. WdListPage
+        - SearchResultPage 추가
+        - tagSlider 스크롤 내려갈 시, position: fixed;
+        - :jobgroupId, :jobId 데이터 생성(JSON)
+            - Navigation 생성
+        - activeCompanySection(적극 채용 중인 회사) 추가
+    2. ProfilePage
+        - BookMarkPage Setting.
+    3. LandingPage
+        - CareerInsightSection을 하위 페이지로 분리 => CareerInsightPage
+    4. PositionListPage setting.

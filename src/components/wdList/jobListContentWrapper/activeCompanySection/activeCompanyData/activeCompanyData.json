@@ -1,0 +1,115 @@
+[
+    {   
+        "companyId": "1",
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.e6cf703b.jpg&w=100&q=75",
+        "logo": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.2b4359c3.png&w=100&q=75",
+        "company": "콜론디(심쿵)",
+        "reward": "1,000,000",
+        "positions": [ 
+            {
+                "position": "백엔드 JAVA 개발자 (Product)",
+                "deadline": "2023.01.10"
+            }, 
+            {
+                "position": "프로젝트 매니저(PM)",
+                "deadline": "2023.01.10"
+            },
+            {
+                "position": "UI/UX 디자이너",
+                "deadline": "2023.01.10"
+            },
+            {
+                "position": "SNS 영상, 컨텐츠 PD",
+                "deadline": "2022.12.20"
+            }
+        ]
+    },
+    {
+        "companyId": "2",
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F5148%2Fzqoq1ivkli8iioas__400_400.jpg&w=400&q=75",
+        "logo": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.946e96ac.jpg&w=100&q=75",
+        "company": "나인코퍼레이션",
+        "reward": "1,000,000",
+        "positions": [ 
+            {
+                "position": "백엔드 JAVA 개발자 (Product)",
+                "deadline": "2023.01.10"
+            }, 
+            {
+                "position": "프로젝트 매니저(PM)",
+                "deadline": "2023.01.10"
+            },
+            {
+                "position": "UI/UX 디자이너",
+                "deadline": "2023.01.10"
+            },
+            {
+                "position": "SNS 영상, 컨텐츠 PD",
+                "deadline": "2022.12.20"
+            }
+        ]
+    },
+    {   
+        "companyId": "3",
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.e6cf703b.jpg&w=100&q=75",
+        "logo": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.946e96ac.jpg&w=100&q=75",
+        "company": "콜론디(심쿵)",
+        "reward": "1,000,000",
+        "positions": [ 
+            {
+                "position": "백엔드 JAVA 개발자 (Product)",
+                "deadline": "2023.01.10"
+            }, 
+            {
+                "position": "프로젝트 매니저(PM)",
+                "deadline": "2023.01.10"
+            },
+            {
+                "position": "UI/UX 디자이너",
+                "deadline": "2023.01.10"
+            }
+        ]
+    },
+    {   
+        "companyId": "4",
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.e6cf703b.jpg&w=100&q=75",
+        "logo": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.78f1a361.jpg&w=100&q=75",
+        "company": "피알앤디컴퍼니(헤이딜러)",
+        "reward": "1,000,000",
+        "positions": [ 
+            {
+                "position": "백엔드 JAVA 개발자 (Product)",
+                "deadline": "2023.01.10"
+            }, 
+            {
+                "position": "프로젝트 매니저(PM)",
+                "deadline": "2023.01.10"
+            }
+        ]
+    },
+    {   
+        "companyId": "5",
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.e6cf703b.jpg&w=100&q=75",
+        "logo": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.81638eec.jpg&w=100&q=75",
+        "company": "콜론디(심쿵)",
+        "reward": "1,000,000",
+        "positions": [ 
+            {
+                "position": "백엔드 JAVA 개발자 (Product)",
+                "deadline": "2023.01.10"
+            }, 
+            {
+                "position": "프로젝트 매니저(PM)",
+                "deadline": "2023.01.10"
+            },
+            {
+                "position": "UI/UX 디자이너",
+                "deadline": "2023.01.10"
+            },
+            {
+                "position": "SNS 영상, 컨텐츠 PD",
+                "deadline": "2022.12.20"
+            }
+        ]
+    }
+]

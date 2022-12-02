@@ -112,6 +112,7 @@ form {
     }
 
     & select {
+        cursor: pointer;
         padding-left: 12px;
         width: 100%;
         position: absolute;
@@ -125,5 +126,19 @@ form {
         color: #333;
         padding-left: 45px;
         font-weight: 400;       
+    }
+}
+
+.login-lang-select-arrow {
+    right: 13px;
+    position: absolute;
+    right: 20px;
+    font-size: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    & svg {
+        width: 10px;
+        height: 10px;
     }
 }

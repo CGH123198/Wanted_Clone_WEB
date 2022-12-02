@@ -1,0 +1,33 @@
+@import '../../../../../lib/styles/mediaQuery.scss';
+
+.active-company-slide-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 1060px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.active-company-slide {
+    margin-left: -9px;
+    margin-right: -4.5px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.active-company-slide-list {
+    position: relative;
+    display: flex;
+    margin: 0 10px;
+    padding: 0;
+    height: 100%;
+}
+
+/** max-width */
+@media screen and (max-width: $narrowest) {
+    .active-company-slide {
+        overflow: scroll;
+    }
+}

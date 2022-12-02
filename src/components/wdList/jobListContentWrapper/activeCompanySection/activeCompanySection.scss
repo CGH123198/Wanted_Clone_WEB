@@ -1,0 +1,18 @@
+@import '../../../../lib/styles/mediaQuery.scss';
+
+.active-company-title-style {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -.3px;
+    color: #333;
+    margin: 20px 0 14px;
+}
+
+/** max-width*/ 
+
+@media screen and (max-width: $narrowest) {
+    .active-company-title-style {
+        margin: 20px;
+    }
+}

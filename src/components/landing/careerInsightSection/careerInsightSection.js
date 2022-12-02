@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import './careerInsightSection.scss';
 import CategorySlider from '../../common/categorySlider/categorySlider';
 import CareerInsightListContainer from '../careerInsightList/careerInsightListContainer';
+import categories from './category.json';
 
 const LandingSectionWrap = styled.section`
     padding: 60px 0;
@@ -9,11 +10,6 @@ const LandingSectionWrap = styled.section`
 
 
 const CareerInsightSection = () => {
-    const categories = [ 
-        "IT/기술", "취업/이직", "인간관계", "리더십", "개발", "MD",
-        "UX/UI", "데이터", "콘텐츠 제작", "노무", "서비스기획", "경영/전략", "디자인", "HR",
-        "마케팅", "조직문화", "회사생활", "커리어고민", "라이프스타일", "브랜딩"
-    ]
 
     return (
         <LandingSectionWrap>
