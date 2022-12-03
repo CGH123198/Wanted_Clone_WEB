@@ -6,6 +6,7 @@ import { sizes } from '../../../lib/styles/mediaQuery';
 import LanguageSelect from '../languageSelect/languageSelect';
 
 const FooterWrap = styled.footer`
+    display: block;
     padding: 18px 0 65px;
     background-color: #fff;
     border-top: 1px solid #ececec;

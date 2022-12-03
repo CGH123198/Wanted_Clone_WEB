@@ -1,0 +1,45 @@
+@import '../../../../lib/styles/mediaQuery.scss';
+
+.search-result-list-container {
+    &>ul {
+        margin: -10px;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 24%;
+    }
+
+    &>ul li {
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: $narrower) {
+    .search-result-list-container {
+        margin: 20px;
+
+        &>ul li {
+            width: calc( (100% - 40px) / 2 );
+            height: 50vw;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+@media screen and (max-width: $narrowest) {
+    .search-result-list-container {
+        &>ul li {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media screen and (min-width: $narrower) {
+    .search-result-list-container {
+        &>ul li {
+            width: calc( (100% - 80px) / 4 );
+            height: 30vw;
+            max-height: 330px;
+        }
+    }
+}

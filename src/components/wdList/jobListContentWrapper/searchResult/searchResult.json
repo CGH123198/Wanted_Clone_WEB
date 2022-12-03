@@ -1,0 +1,166 @@
+[
+    {   
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F1939%2Fswzwjygoxj6izlei__1080_790.jpg&w=1000&q=75",
+        "position": "[부트캠프] 백엔드 교육 리드",
+        "company": "코드잇",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31714%2Ffzhnm307jfwfkckk__1080_790.jpg&w=1000&q=75",
+        "position": "백엔드 웹 엔지니어(3년 이상)",
+        "company": "이보엠디코리아",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F15062%2Fzf91g1cswp8wffiq__1080_790.jpg&w=1000&q=75",
+        "position": "Java 개발자(시니어)",
+        "company": "라텔앤드파트너즈",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F15062%2Fzf91g1cswp8wffiq__1080_790.jpg&w=1000&q=75",
+        "position": "React 프론트엔드 개발자",
+        "company": "ABC",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {   
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F853%2F2fxappnyjl554wwe__1080_790.jpg&w=1000&q=75",
+        "position": "레진 웹프론트 개발자",
+        "company": "레진엔터테인먼트",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {   "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F5252%2Fjeukxecd6bitocwv__1080_790.jpg&w=1000&q=75",
+        "position": "FE 엔지니어",
+        "company": "더스윙",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {   
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F2585%2Fovllbjwvobuhmsx4__1080_790.jpg&w=1000&q=75",
+        "position": "[Tech] 백엔드 개발자",
+        "company": "더블유컨셉코리아(W컨셉)",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {   
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F34297%2Fheeiatpq8pkisd1n__1080_790.png&w=1000&q=75",
+        "position": "JAVA/Kotlin 개발자",
+        "company": "포스트보이저",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {   
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F1939%2Fswzwjygoxj6izlei__1080_790.jpg&w=1000&q=75",
+        "position": "[부트캠프] 백엔드 교육 리드",
+        "company": "코드잇",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31714%2Ffzhnm307jfwfkckk__1080_790.jpg&w=1000&q=75",
+        "position": "백엔드 웹 엔지니어(3년 이상)",
+        "company": "이보엠디코리아",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {   
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F853%2F2fxappnyjl554wwe__1080_790.jpg&w=1000&q=75",
+        "position": "레진 웹프론트 개발자",
+        "company": "레진엔터테인먼트",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {   "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F5252%2Fjeukxecd6bitocwv__1080_790.jpg&w=1000&q=75",
+        "position": "FE 엔지니어",
+        "company": "더스윙",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {   
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F853%2F2fxappnyjl554wwe__1080_790.jpg&w=1000&q=75",
+        "position": "레진 웹프론트 개발자",
+        "company": "레진엔터테인먼트",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {   "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F5252%2Fjeukxecd6bitocwv__1080_790.jpg&w=1000&q=75",
+        "position": "FE 엔지니어",
+        "company": "더스윙",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {   
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F2585%2Fovllbjwvobuhmsx4__1080_790.jpg&w=1000&q=75",
+        "position": "[Tech] 백엔드 개발자",
+        "company": "더블유컨셉코리아(W컨셉)",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {   
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F34297%2Fheeiatpq8pkisd1n__1080_790.png&w=1000&q=75",
+        "position": "JAVA/Kotlin 개발자",
+        "company": "포스트보이저",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31714%2Ffzhnm307jfwfkckk__1080_790.jpg&w=1000&q=75",
+        "position": "백엔드 웹 엔지니어(3년 이상)",
+        "company": "이보엠디코리아",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F15062%2Fzf91g1cswp8wffiq__1080_790.jpg&w=1000&q=75",
+        "position": "Java 개발자(시니어)",
+        "company": "라텔앤드파트너즈",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F15062%2Fzf91g1cswp8wffiq__1080_790.jpg&w=1000&q=75",
+        "position": "React 프론트엔드 개발자",
+        "company": "ABC",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {   
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F853%2F2fxappnyjl554wwe__1080_790.jpg&w=1000&q=75",
+        "position": "레진 웹프론트 개발자",
+        "company": "레진엔터테인먼트",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31714%2Ffzhnm307jfwfkckk__1080_790.jpg&w=1000&q=75",
+        "position": "백엔드 웹 엔지니어(3년 이상)",
+        "company": "이보엠디코리아",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {   
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F853%2F2fxappnyjl554wwe__1080_790.jpg&w=1000&q=75",
+        "position": "레진 웹프론트 개발자",
+        "company": "레진엔터테인먼트",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {   "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F5252%2Fjeukxecd6bitocwv__1080_790.jpg&w=1000&q=75",
+        "position": "FE 엔지니어",
+        "company": "더스윙",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    },
+    {   
+        "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F853%2F2fxappnyjl554wwe__1080_790.jpg&w=1000&q=75",
+        "position": "레진 웹프론트 개발자",
+        "company": "레진엔터테인먼트",
+        "location": ["서울", "한국"],
+        "reward": "채용 보상금 1,000,000원"
+    }
+]

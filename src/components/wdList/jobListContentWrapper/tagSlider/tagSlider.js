@@ -27,7 +27,7 @@ const PrevButton = styled.div`
 
     @media screen and (min-width: ${sizes.narrowest}px) {
         display: flex;
-        top: 83px;
+        top: 103px;
         bottom: 135px;
     }
 
@@ -57,12 +57,12 @@ const NextButton = styled.div`
 
     @media screen and (min-width: ${sizes.narrowest}px) {
         display: flex;
-        top: 83px;
+        top: 103px;
         bottom: 135px;
     }
 
     @media screen and (min-width: ${sizes.narrower}px) {
-        ${({ scrollPosition }) => (scrollPosition > 172) && `
+        ${({ scrollPosition }) => (scrollPosition > 180) && `
             position: sticky;
             margin-top: 0px;
             opacity: inherit;

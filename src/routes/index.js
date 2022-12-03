@@ -12,6 +12,7 @@ import PositionListPage from "../pages/positionList";
 import AuthPage from '../pages/auth';
 import ProfileIndexPage from "../pages/profile";
 import BookMarkPage from "../pages/profile/bookMarkPage";
+import PositionInfoPage from "../pages/positionInfo";
 
 const RootRoute = () => {
     return (
@@ -22,9 +23,10 @@ const RootRoute = () => {
                         <Route path=":tagId" element={<CareerInsightPage />} />
                     </Route>
                     <Route path="companies/:companyId" element={<PositionListPage />} />
+                    <Route path="position/:positionId" element={<PositionInfoPage />} />
                     <Route path="jobsfeed" element={<JobsFeedPage />} />
                     <Route path="wdlist" element={<WdListPage />} >
-                        <Route path=":jobgroupId(/:jobId)" element={<SearchResultPage />} />
+                        <Route path=":jobgroupId" element={<SearchResultPage />} />
                     </Route>
                     <Route path="profile" element={<ProfileIndexPage />} >
                         <Route path="bookmark" element={<BookMarkPage />} />

@@ -9,13 +9,13 @@ const AtricleWrap = styled.article`
     max-width: 1060px;
     margin: 0 auto;
 
-    & header {
+    & .matched-job-title-header {
         position: relative;
         margin-bottom: 30px;
     }
 
     @media screen and (max-width: ${sizes.narrowest}) {
-        & header {
+        & .matched-job-title-header {
             margin-left: 20px;
             margin-right: 20px;
             margin-bottom: 0;
@@ -32,7 +32,7 @@ const MatchedJobSection = () => {
 
     return (
         <AtricleWrap>
-            <header>
+            <header className="matched-job-title-header">
                 <h2 className="matched-job-title-h2">
                     <div className="matched-job-title-main">
                         <img aria-label="wantedai-logo" src="https://static.wanted.co.kr/images/ai/logo-wantedai.png" width="114" alt="logo-wantedai" style={{ marginBottom: "3px" }} />

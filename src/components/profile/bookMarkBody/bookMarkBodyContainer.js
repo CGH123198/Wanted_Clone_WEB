@@ -1,4 +1,4 @@
-import BookMarkBody from "./BookMarkBody"
+import BookMarkBody from "./bookMarkBody"
 
 const BookMarkBodyContainer = () => {
     return (
@@ -6,4 +6,4 @@ const BookMarkBodyContainer = () => {
     )
 }
 
-export default;
+export default BookMarkBodyContainer;

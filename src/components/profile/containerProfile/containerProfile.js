@@ -1,4 +1,5 @@
 import './containerProfile.scss';
+import BookMarkBodyContainer from "../bookMarkBody/bookMarkBodyContainer";
 
 const ContainerProfile = ({ children }) => {
     return (
@@ -9,6 +10,7 @@ const ContainerProfile = ({ children }) => {
                     <button type="button" className="nav-profile-button">{children}</button>
                 </h2>
             </nav>
+            <BookMarkBodyContainer />
         </div>
     )
 }

@@ -15,10 +15,6 @@
     height: 100%;
 }
 
-.job-card-body {
-    margin-top: -20px;
-}
-
 .job-card-position {
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -27,9 +23,9 @@
     position: relative;
     color: #333;
     font-size: 17px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.2;
-    max-height: 2.2em;
+    max-height: 2.25em;
     overflow: hidden;
     text-align: left;
     word-break: break-word;
@@ -71,7 +67,6 @@
     width: 100%;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
 }
 
 
@@ -105,11 +100,9 @@
 }
 
 /** max-width */
-@media screen and (max-width: $narrowest) {
+@media screen and (max-width: $narrower) {
     .swiper-container {
-        height: 60vw;
-        min-height: 350px;
-        max-height: 500px;
+        height: 30vw;
     }
 
     .swiper-button-prev {
@@ -122,6 +115,10 @@
         height: 30px;
     }
 
+    
+}
+
+@media screen and (max-width: $narrowest) {
     .job-card-position {
         font-size: 14px;
     }
@@ -132,15 +129,12 @@
 }
 
 /** min-width */
-@media screen and (min-width: $narrowest) {
+@media screen and (min-width: $narrower) {
     .swiper-container {
         height: 32vw;
         max-height: 400px;
         margin-bottom: 50px;
     }
-}
-
-@media screen and (min-width: $narrower) {
 }
 
 @media screen and (min-width: $narrow) {

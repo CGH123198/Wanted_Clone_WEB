@@ -50,3 +50,12 @@
     3. LandingPage
         - CareerInsightSection을 하위 페이지로 분리 => CareerInsightPage
     4. PositionListPage setting.
+
+## 2022. 12. 03
+    1. WdListPage
+        - SearchResultPage 데이터 추가
+        - FourCardData - React.memo추가 북마크 버튼 눌리지 않는 이상 리렌더링 방지.
+        - activeCompanyData.json 수정(tag추가)
+    2. PositionListPage
+        - 태그리스트 추가
+        - positionList 추가

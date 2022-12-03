@@ -1,0 +1,112 @@
+@import '../../../lib/styles/mediaQuery.scss';
+
+.company-header {
+    height: 90px;
+    width: 100%;
+    border-bottom: 1px solid #e1e2e3;
+    background-color: #fff;
+}
+
+.company-header-inner-wrapper {
+    position: relative;
+    height: 100%;
+    width: 90%;
+    max-width: 1060px;
+    margin: 0 auto;
+
+    & h2 {
+        position: absolute;
+        left: 65px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        display: inline-block;
+        width: calc(100% - 200px);
+        font-size: 26px;
+        font-weight: 600;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #333;
+    }
+}
+
+.company-header-logo-img {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border: 1px solid #f1f1f2;
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.company-header-follow-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    min-width: 64px;
+    padding: 0 27px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color .2s;
+    height: 40px;
+    font-size: 15px;
+}
+
+/** max-width */
+@media screen and (max-width: $narrowest) {
+    .company-header {
+        height: auto;
+        padding: 20px;
+    }
+
+    .company-header-inner-wrapper { 
+        & h2 {
+            position: relative;
+            left: auto;
+            top: auto;
+            transform: none;
+            display: block;
+            margin: 15px 0;
+            width: 100%;
+            line-height: 1.2;
+            text-align: center;
+            text-overflow: clip;
+            white-space: normal;
+            overflow: initial;
+        }
+    }
+
+    .company-header-logo-img {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .company-header-follow-button {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        display: block;
+        margin: 0 auto;
+        height: 35px;
+        font-size: 14px;
+        padding: 9px 20px 8px;
+    }
+}

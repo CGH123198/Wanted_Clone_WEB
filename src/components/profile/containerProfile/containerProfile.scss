@@ -3,8 +3,7 @@
 .container-profile {
     position: relative;
     max-width: 1060px;
-    margin: 0 auto;
-    min-height: 57.2vh;
+    margin: 0;
 }
 
 .nav-profile {
@@ -21,18 +20,37 @@
 
 .nav-profile-button {
     display: none;
+    box-sizing: border-box;
     width: 100vw;
     border-left: 0;
     position: relative;
-    left: -25px;
+    margin-left: auto;
     border-top: 1px solid rgba(0,0,0,.1);
     border-bottom: 1px solid rgba(0,0,0,.1);
     cursor: pointer;
 }
 
 /** max-width */
+@media screen and (max-width: $narrow) {
+    .container-profile {
+        padding-bottom: 100px;
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: $narrower) {
+    .container-profile {
+        padding-top: 50px;
+    }
+}
+
 @media screen and (max-width: $narrowest) {
     .container-profile {
+        margin: 0;
+        width: 100%;
+
         & h2 p {
             display: none;
         }
@@ -47,20 +65,6 @@
         font-weight: 600;
         background-color: #fff;
         border-bottom: 1px solid #e1e2e3;
-    }
-}
-
-@media screen and (max-width: $narrower) {
-    .container-profile {
-        padding-top: 50px;
-    }
-}
-
-@media screen and (max-width: $narrow) {
-    .container-profile {
-        padding-bottom: 100px;
-        margin: 0 auto;
-        width: 90%;
     }
 }
 /** min-width */

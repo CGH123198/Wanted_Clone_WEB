@@ -1,8 +1,8 @@
-import SearchReslutContainer from "../../components/wdList/searchResult/searchResultContainer";
+import SearchResultContainer from "../../components/wdList/jobListContentWrapper/searchResult/searchResultContainer";
 
 const SearchResultPage = () => {
     return (
-        <SearchReslutContainer />
+        <SearchResultContainer />
     )
 }
 

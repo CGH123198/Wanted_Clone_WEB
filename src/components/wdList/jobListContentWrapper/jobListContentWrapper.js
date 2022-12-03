@@ -5,6 +5,8 @@ import FilterInWdListContainer from './filterInWdList/filterInWdListContainer';
 import BookMarkSectionContainer from './bookMarkSection/bookMarkSectionContainer';
 import ActiveCompanySection from './activeCompanySection/activeCompanySection';
 
+import { Outlet } from 'react-router-dom';
+
 
 const JobListContentWrapper = () => {
     
@@ -15,6 +17,7 @@ const JobListContentWrapper = () => {
                 <hr className="joblist-content-divider" />
                 <BookMarkSectionContainer />
                 <ActiveCompanySection />
+                <Outlet />
             </div>
         </div>
     )

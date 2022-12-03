@@ -5,7 +5,6 @@ import TagSliderContainer from '../tagSlider/tagSliderContainer';
 import { useState, useEffect } from 'react';
 
 const FilterWrap = styled.div`
-    position: sticky;
     top: 50px;
     margin-bottom: 5px;
     padding-top: 10px;
@@ -30,7 +29,7 @@ const FilterWrap = styled.div`
     }
 
     @media (min-width: ${sizes.narrower}px) {
-        ${({ scrollPosition }) => (scrollPosition > 172) && `
+        ${({ scrollPosition }) => (scrollPosition > 180) && `
             position: fixed;
             left: 0;
             right: 0;

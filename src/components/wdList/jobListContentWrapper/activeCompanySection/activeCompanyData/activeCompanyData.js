@@ -60,7 +60,7 @@ const CompanyLogo = styled.div`
 
 const ActiveCompanyData = ({data}) => {
     const navigate = useNavigate();
-    console.log(data);
+    
     const clickPositionList = () => {
         navigate(`/companies/${data.companyId}`)
     }
