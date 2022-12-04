@@ -69,8 +69,8 @@ const CategorySlider = ({ data }) => {
             >
                 {
                     data &&
-                    data.map( (data) =>
-                    <SwiperSlide style={{ width: "auto"}}>
+                    data.map( (data, idx) =>
+                    <SwiperSlide style={{ width: "auto"}} key={idx}>
                         <Category category={data} /> 
                     </SwiperSlide>
                     )

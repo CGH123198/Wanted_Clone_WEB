@@ -34,9 +34,9 @@ const CarouselComponent = ({ data }) => {
             >
                 {
                     data &&
-                    data.map( elem => {
+                    data.map( (elem, idx) => {
                         return (
-                            <SwiperSlide>
+                            <SwiperSlide key={idx}>
                                 <div className="content-box" >
                                     <div className="image-box">
                                         <img src={elem.img} alt={elem.info[0]} />

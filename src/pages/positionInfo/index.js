@@ -1,6 +1,12 @@
+import Padding from '../../components/common/padding/padding';
+import PositionDetailContainer from '../../components/positionInfo/positionDetail/positionDetailContainer';
+
 const PositionInfoPage = () => {
     return (
-        <div>PositionInfoPAge</div>
+        <>
+            <Padding />
+            <PositionDetailContainer />
+        </>
     )
 }
 

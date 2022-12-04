@@ -1,0 +1,88 @@
+@import '../../../../lib/styles/mediaQuery.scss';
+
+
+.job-process-container {
+    top: 70px;
+    display: block;
+}
+
+.before-application-container>header {
+    border-radius: 3px;
+}
+
+.reward-wide-version-container {
+
+    &>h3 {
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: normal;
+        text-align: left;
+        color: #333;
+    }
+
+    &>ul {
+        overflow: hidden;
+        margin: 24px 0;
+    }
+
+    &>ul>li {
+        float: left;
+        width: 50%;
+        letter-spacing: normal;
+        text-align: left;
+    }
+
+    &>ul>li>h4 {
+        font-size: 14px;
+        font-weight: 600;
+        color: #999;
+        margin-bottom: 8px;
+        line-height: 1.2;
+    }
+
+    &>ul>li>p {
+        font-size: 15px;
+        color: #333;
+        font-weight: 600;
+    }
+}
+
+
+@media (max-width: $narrower) {
+    .job-process-container {
+        display: none;
+    }
+}
+
+/**min-width */
+@media (min-width: $narrower) and (max-width: $narrow) {
+    .job-process-container {
+        right: 5%;
+        width: 340px;
+        position: fixed;
+    }
+}
+
+@media (min-width: $narrower) {
+    .before-application-container>header {
+        width: 340px;
+        border: 1px solid #e1e2e3;
+        background-color: #fff;
+        padding: 24px 20px;
+    }
+}
+
+@media (min-width: $narrow) {
+    .job-process-container {
+        width: 340px;
+        position: fixed;
+        right: calc((100% - 1060px)/2);
+    }
+
+    .before-application-container>header {
+        width: 340px;
+        border: 1px solid #e1e2e3;
+        background-color: #fff;
+        padding: 24px 20px;
+    }
+}

@@ -24,7 +24,7 @@ const CareerInsightList = ({ careerData }) => {
                     careerData.map( (elem, index) => {
                         if(index < 4) {
                             return (
-                                <li className="card-section">
+                                <li className="card-section" key={index}>
                                     <CareerInsightContent data={elem} /> 
                                 </li>  
                             )

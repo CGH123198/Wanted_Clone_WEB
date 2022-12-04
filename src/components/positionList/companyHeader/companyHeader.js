@@ -49,7 +49,7 @@ const CompanyHeader = ({ data }) => {
                     onClick={isFollow}
                     follow={follow}
                 >
-                    <span>팔로우</span>
+                    { follow ? <span>팔로잉</span> : <span>팔로우</span>}
                 </FollowButton>
             </div>
         }

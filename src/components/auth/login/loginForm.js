@@ -54,7 +54,7 @@ const LoginForm = ({onSubmit}) => {
                         © Wantedlab, Inc.
                     </p>
                     <div className="login-lang-select">
-                        <img src="https://static.wanted.co.kr/images/wantedoneid/ico_KR.svg" />
+                        <img src="https://static.wanted.co.kr/images/wantedoneid/ico_KR.svg" alt="" />
                         <select>
                             <option value="ko_KR">한국어</option>
                             <option value="en_US">English</option>

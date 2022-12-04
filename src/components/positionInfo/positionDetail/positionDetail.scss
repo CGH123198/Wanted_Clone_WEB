@@ -1,0 +1,49 @@
+@import '../../../lib/styles/mediaQuery.scss';
+
+.position-detail-content-wrapper {
+    max-width: 1060px;
+}
+
+.position-detail-relative-wrapper {
+    position: relative;
+    max-width: 1060px;
+}
+
+/** min-width */
+@media screen and (min-width: $narrowest) and (max-width: $narrow) {
+    .position-detail-content-wrapper {
+        margin: 0 auto;
+        padding: 20px 0 80px;
+        width: 90%;
+    }
+}
+
+@media (min-width: $narrower) {
+    .postion-detail {
+        background-color: #fff;
+    }
+
+    .position-content-class {
+        display: inline-block;
+        width: calc(100% - 360px);
+        vertical-align: top;
+    }
+}
+
+@media screen and (min-width: $narrow) {
+    .position-detail-content-wrapper {
+        width: 87.72%;
+        margin: 0 auto;
+        padding: 20px 0 80px;
+    }
+
+    .postion-detail {
+        background-color: #fff;
+    }
+
+    .position-content-class {
+        display: inline-block;
+        width: calc(100% - 360px);
+        vertical-align: top;
+    }
+}

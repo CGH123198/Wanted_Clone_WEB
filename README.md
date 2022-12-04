@@ -59,3 +59,11 @@
     2. PositionListPage
         - 태그리스트 추가
         - positionList 추가
+
+## 2022. 12. 04
+    1. PositionListPage
+        - CompanyDetail 리팩토링
+        - 페이지 완성
+    2. PositionInfoPage
+        - KakaoMap 연동
+        - 페이지 완성
