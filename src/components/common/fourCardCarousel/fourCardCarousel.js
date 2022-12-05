@@ -7,12 +7,12 @@ import './fourCardCarousel.scss';
 import FourCardData from './fourCardData';
 
 
-const FourCardCarousel = ({data}) => {
+const FourCardCarousel = ({data, loading, error}) => {
     const navigationPrevRef = useRef(null);
     const navigationNextRef = useRef(null);
-    
     return (
         <>
+            {error && error }
             <Swiper
                 className='swiper-container'
                 breakpoints={{

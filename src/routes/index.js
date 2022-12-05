@@ -27,6 +27,7 @@ const RootRoute = () => {
                     <Route path="jobsfeed" element={<JobsFeedPage />} />
                     <Route path="wdlist" element={<WdListPage />} >
                         <Route path=":jobgroupId" element={<SearchResultPage />} />
+                        <Route path=":jobgroupId/:jobId" element={<SearchResultPage />} />
                     </Route>
                     <Route path="profile" element={<ProfileIndexPage />} >
                         <Route path="bookmark" element={<BookMarkPage />} />

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { sizes } from '../../../lib/styles/mediaQuery';
-import { useParams, useNavigate, useLocation } from 'react-router-dom';
+import { useParams, useNavigate, } from 'react-router-dom';
 
 const CategoryBtn= styled.button`
     display: inline-block;

@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { sizes } from '../../../lib/styles/mediaQuery';
 import './matchedJobSection.scss';
-import MatchedJobCarouselContainer from './MatchedJobCarouselContainer.js';
+
+import MatchedJobCarouselContainer from './matchedJobCarouselContainer';
 
 const AtricleWrap = styled.article`
     position: relative;
@@ -42,7 +43,7 @@ const MatchedJobSection = () => {
                         </button>
                     </div>
                     <div className="matched-job-title-more">
-                        <Link to="#">
+                        <Link to={`/position/#`}>
                             포지션 전체보기
                         </Link>
                         <span>{'>'}</span>

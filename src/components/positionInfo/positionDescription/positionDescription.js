@@ -16,7 +16,7 @@ const PositionDescription = ({data}) => {
                     <span className="deadline-header">근무지역</span>
                     <span className="deadline-body">{data.location}</span>
                 </div>
-                <KakaoMap />
+                <KakaoMap data={data} />
             </section>
         </div>
     )

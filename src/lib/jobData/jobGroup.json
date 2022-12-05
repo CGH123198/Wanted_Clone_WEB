@@ -1,0 +1,270 @@
+[
+    {
+        "jobGroupId": "0",
+        "jobGroup": "전체",
+        "job": [{
+            "jobId": "0",
+            "job": "직군을 선택하세요."
+        }]
+    },
+    {
+        "jobGroupId": "1",
+        "jobGroup": "개발",
+        "job": [
+            {
+                "jobId": "0",
+                "job": "개발 전체"
+            },
+            {
+                "jobId": "1",
+                "job": "웹 개발자"
+            },
+            {
+                "jobId": "2",
+                "job": "서버 개발자"
+            },
+            {
+                "jobId": "3",
+                "job": "소프트웨어 엔지니어"
+            },
+            {
+                "jobId": "4",
+                "job": "프론트엔드 개발자"
+            },
+            {
+                "jobId": "5",
+                "job": "자바 개발자"
+            },
+            {
+                "jobId": "6",
+                "job": "안드로이드 개발자"
+            },
+            {
+                "jobId": "7",
+                "job": "C,C++ 개발자"
+            },
+            {
+                "jobId": "8",
+                "job": "파이썬 개발자"
+            },
+            {
+                "jobId": "9",
+                "job": "iOS 개발자"
+            },
+            {
+                "jobId": "10",
+                "job": "시스템, 네트워크 관리자"
+            },
+            {   
+                "jobId": "11",
+                "job": "Node.js 개발자"
+            },
+            {   
+                "jobId": "12",
+                "job": "데이터 엔지니어"
+            },
+            {   
+                "jobId": "13",
+                "job": "DvOps/시스템 관리자"
+            },
+            {   
+                "jobId": "14",
+                "job": "머신러닝 엔지니어"
+            },
+            {   
+                "jobId": "15",
+                "job": "개발 매니저"
+            },
+            {   
+                "jobId": "16",
+                "job": "기술지원"
+            },
+            {   
+                "jobId": "17",
+                "job": "데이터 사이언티스트"
+            },
+            {   
+                "jobId": "18",
+                "job": "QA,테스트 엔지니어"
+            }
+        ]
+    },
+    {
+        "jobGroupId": "2",
+        "jobGroup": "경영·비즈니스",
+        "job": [
+            {
+                "jobId": "0",
+                "job": "경영·비즈니스 전체"
+            },
+            {   
+                "jobId": "19",
+                "job": "서비스 기획자"
+            },
+            {   "jobId": "20",
+                "job": "PM·PO"
+            },
+            {   "jobId": "21",
+                "job": "사업개발·기획자"
+            },
+            {   
+                "jobId": "22",
+                "job": "전력 기획자"
+            },
+            {
+                "job": "운영 매니저"
+            },
+            {   
+                "jobId": "23",
+                "job": "회계·경리"
+            },
+            {   "jobId": "24",
+                "job": "데이터 분석가"
+            },
+            {   "jobId": "25",
+                "job": "자금담당"
+            },
+            {   
+                "jobId": "26",
+                "job": "총무"
+            }
+        ]
+    },
+    {
+        "jobGroupId": "3",
+        "jobGroup": "마케팅·광고",
+        "job": [{
+            "jobId": "0",
+            "job": "마케팅·광고 전체"
+        }]
+    },
+    {
+        "jobGroupId": "4",
+        "jobGroup": "디자인",
+        "job": [{
+            "jobId": "0",
+            "job": "디자인 전체"
+        }]
+    },
+    {
+        "jobGroupId": "5",
+        "jobGroup": "영업",
+        "job": [{
+            "jobId": "0",
+            "job": "영업 전체"
+        }]
+    },
+    {
+        "jobGroupId": "6",
+        "jobGroup": "고객서비스·리테일",
+        "job": [{
+            "jobId": "0",
+            "job": "고객서비스·리테일 전체"
+        }]
+    },
+    {
+        "jobGroupId": "7",
+        "jobGroup": "게임 제작",
+        "job": [{
+            "jobId": "0",
+            "job": "게임 제작 전체"
+        }]
+    },
+    {
+        "jobGroupId": "8",
+        "jobGroup": "HR",
+        "job": [{
+            "jobId": "0",
+            "job": "HR 전체"
+        }]
+    },
+    {
+        "jobGroupId": "9",
+        "jobGroup": "미디어",
+        "job": [{
+            "jobId": "0",
+            "job": "미디어 전체"
+        }]
+    },
+    {
+        "jobGroupId": "10",
+        "jobGroup": "엔지니어링·설계",
+        "job": [{
+            "jobId": "0",
+            "job": "엔지니어링·설계 전체"
+        }]
+    },
+    {
+        "jobGroupId": "11",
+        "jobGroup": "금융",
+        "job": [{
+            "jobId": "0",
+            "job": "금융 전체"
+        }]
+    },
+    {
+        "jobGroupId": "12",
+        "jobGroup": "제조·생산",
+        "job": [{
+            "jobId": "0",
+            "job": "제조·생산 전체"
+        }]
+    },
+    {
+        "jobGroupId": "13",
+        "jobGroup": "물류·무역",
+        "job": [{
+            "jobId": "0",
+            "job": "물류·무역 전체"
+        }]
+    },
+    {
+        "jobGroupId": "14",
+        "jobGroup": "의료·제약·바이오",
+        "job": [{
+            "jobId": "0",
+            "job": "의료·제약·바이오 전체"
+        }]
+    },
+    {
+        "jobGroupId": "15",
+        "jobGroup": "교육",
+        "job": [{
+            "jobId": "0",
+            "job": "교육 전체"
+        }]
+    },
+    {
+        "jobGroupId": "16",
+        "jobGroup": "식·음료",
+        "job": [{
+            "jobId": "0",
+            "job": "식·음료 전체"
+        }]
+    },
+    {
+        "jobGroupId": "17",
+        "jobGroup": "법률·법집행기관",
+        "job": [{
+            "jobId": "0",
+            "job": "법률·법집행기관 전체"
+        }]
+    },
+    {
+        "jobGroupId": "18",
+        "jobGroup": "건설·시설",
+        "job": [{
+            "jobId": "0",
+            "job": "건설·시설 전체"
+        }]
+    },
+    {
+        "jobGroupId": "19",
+        "jobGroup": "공공·복지",
+        "job": [{
+            "jobId": "0",
+            "job": "공공·복지 전체"
+        }]
+    }
+]
+

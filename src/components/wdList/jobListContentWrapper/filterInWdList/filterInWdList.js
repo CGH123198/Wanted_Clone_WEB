@@ -23,7 +23,7 @@ const FilterWrap = styled.div`
             top: 55px;
             border-bottom: 1px solid #36f;
             background: #fff;
-            z-index: 2;
+            z-index: 100;
             padding: 20px 0 0!important;
         `}
     }
@@ -36,7 +36,7 @@ const FilterWrap = styled.div`
             top: 0;
             border-bottom: 1px solid #36f;
             background: #fff;
-            z-index: 2;
+            z-index: 100;
             padding: 20px 0 0!important;
         `}
     }

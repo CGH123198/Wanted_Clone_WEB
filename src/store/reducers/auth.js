@@ -17,4 +17,4 @@ const HomeReducer = (state = initialState, action) => {
 
 }
 
-export default HomeReducer
+export default HomeReducer;

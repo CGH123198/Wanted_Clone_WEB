@@ -67,3 +67,10 @@
     2. PositionInfoPage
         - KakaoMap 연동
         - 페이지 완성
+
+## 2022. 12. 05
+    1. Redux setting(Redux, Redux-saga, redux-devtools-extention, redux-action)
+    2. Readucer(loading)
+    3. axios CLIENT => baseURL setting
+    4. wdListPage
+        - jobGroup navigation 추가

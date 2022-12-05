@@ -1,7 +1,6 @@
 import './rewardNarrowVersion.scss';
 
 const RewardNarrowVersion = ({data}) => {
-    console.log(data)
     return (
         <div className="visible-narrow">
             <div className="before-application-container">

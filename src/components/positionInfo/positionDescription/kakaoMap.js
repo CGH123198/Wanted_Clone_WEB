@@ -1,13 +1,13 @@
 import { useEffect } from 'react';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 const KakaoMap = ({data}) => {
     const mapRef = useRef();
-    
+
     useEffect( () => {
         if(data) {
             const options = {
-                center: new window.kakao.maps.LatLng(33.450701, 126.570667),
+                center: new window.kakao.maps.LatLng(data.latitude, data.longitude),
                 level: 3
             };
             const map = new window.kakao.maps.Map(mapRef.current, options);
@@ -15,9 +15,14 @@ const KakaoMap = ({data}) => {
     }, [data])
 
     return (
-        <div className="KakoMap" ref={mapRef}>
-
-        </div>
+        <a 
+            target="_blank"
+            rel="noreferrer noopener"
+            className="KakoMap" 
+            ref={mapRef} 
+            href={`https://map.kakao.com/link/map/${data.latitude}/${data.longitude}`}
+        >
+        </a>
     )
 }
 

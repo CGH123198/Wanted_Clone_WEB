@@ -1,0 +1,46 @@
+@import '../../../lib/styles/mediaQuery.scss';
+
+.jobGroup-table {
+    max-width: 190px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 40px;
+    overflow-y: auto;
+    max-width: 220px;
+    height: 70vh;
+    background-color: #fff;
+    border: 1px solid #e1e2e3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
+    border-radius: 5px;
+    z-index: 99;
+    padding: 15px 0;
+
+    &::-webkit-scrollbar {
+        background-color: rgba(226, 226, 226, 0);
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 16px;
+        background-color: transparent;
+    }
+
+    &:hover {
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(182, 178, 178, 0.966);
+        }
+    }
+}
+
+@media (max-width: $narrowest) {
+    .jobGroup-table {
+        max-width: 160px;
+        top: 30px;
+        left: 20px;
+        padding: 12px 0;
+        max-width: 190px;
+        overflow: auto;
+    }
+}

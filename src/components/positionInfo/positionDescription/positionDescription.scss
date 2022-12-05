@@ -74,7 +74,8 @@
 .KakoMap {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 40vw;
+    max-height: 500px;
 }
 
 @media screen and (max-width: $narrowest) {

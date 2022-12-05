@@ -1,0 +1,62 @@
+@import "../../../lib/styles/mediaQuery.scss";
+
+.job-category-table {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 40px;
+    width: calc(100% - 140px);
+    max-width: 910px;
+    display: table;
+    height: fit-content;
+    background-color: #fff;
+    border: 1px solid #e1e2e3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 15%);
+    border-radius: 5px;
+    z-index: 99;
+}
+
+.job-category-table-top {
+    padding: 25px 25px 8px;
+    max-width: 910px;
+}
+
+.job-category-table-top-title {
+    color: #666;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.4px;
+    margin-bottom: 10px;
+}
+
+.job-category-table-top-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: $narrowest) {
+    .job-category-table {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1400;
+        border-radius: unset;
+    }
+
+    .job-category-table-top {
+        height: calc(100vh - 152px);
+        overflow-y: auto;
+    }
+
+    .job-category-table-top-title {
+        font-size: 13px;
+        line-height: 16px;
+        margin-bottom: 18px;
+    }
+
+    .job-category-table-top-list {
+        margin-bottom: 100px;
+    }
+}
