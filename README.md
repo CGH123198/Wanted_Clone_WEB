@@ -70,7 +70,9 @@
 
 ## 2022. 12. 05
     1. Redux setting(Redux, Redux-saga, redux-devtools-extention, redux-action)
-    2. Readucer(loading)
+    2. Reducer(loading)
     3. axios CLIENT => baseURL setting
     4. wdListPage
         - jobGroup navigation 추가
+    5. LandingPage - matchedJobSection 서버 연동
+    6. LoadingSpinner 추가

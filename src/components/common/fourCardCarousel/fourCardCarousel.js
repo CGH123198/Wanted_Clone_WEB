@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './fourCardCarousel.scss';
+import LoadingSpinner from '../loading/loading';
 import FourCardData from './fourCardData';
 
 
@@ -35,6 +36,7 @@ const FourCardCarousel = ({data, loading, error}) => {
                     swiper.params.navigation.nextEl = navigationNextRef.current;
                 }}
             >
+            {loading && <LoadingSpinner /> }
             {
                 data &&
                 data.map(elem => {
