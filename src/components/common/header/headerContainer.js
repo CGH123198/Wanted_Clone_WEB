@@ -11,8 +11,22 @@ const HeaderContainer = () => {
     }))
     const dispatch = useDispatch();
 
+    useEffect(() => {
+        if(!localStorage.getItem("auth") && auth) {
+            localStorage.setItem("auth", JSON.stringify(auth));
+        }
+        if(!localStorage.getItem("userId") && user) {
+            localStorage.setItem("userId", JSON.stringify(user)); 
+        }
+    }, [auth, user])
+
     useEffect( () => {
         console.log("auth: ", auth, "user: ", user);
+        if(localStorage.getItem("auth") && !user) {
+            const localAuth = JSON.parse(localStorage.getItem("auth"));
+            dispatch(getUserInfo(localAuth.jwt, localAuth.userId));
+        }
+
         if(auth && !user) {
             dispatch(getUserInfo(auth.jwt, auth.userId));
         }
