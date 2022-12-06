@@ -1,29 +1,24 @@
-//초기 상태값 설정
+import { USER_INFO_SUCCESS, USER_INFO_FAILURE } from "../actions/user";
+import { handleActions } from "redux-actions";
+
 const initialState = {
-    user: {}
+    user: null,
+    error: null
 }
 
 
-//리듀서 설정
-const LoginReducer = (state = initialState, action) => {
+const User = handleActions({
+    [USER_INFO_SUCCESS]: (state, action) => ({
+        ...state,
+        user: action.payload.result,
+        error: null,
+    }),
+    [USER_INFO_FAILURE]: (state, action) => ({
+        ...state,
+        user: null,
+        error: action.payload
+    })
+}, initialState);
 
-    switch (action.type) {
-        case 'LOGIN': {
-            return {
-                ...state,
-                user: {
-                    ...state.user,
-                    name: action.data.name
-                }
-            }
-        }
-        default: {
-            return {
-                ...state
-            }
-        }
-    }
 
-}
-
-export default LoginReducer
+export default User;

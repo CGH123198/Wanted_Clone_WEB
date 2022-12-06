@@ -47,8 +47,6 @@ const CategoryNav = () => {
     const groupRef = useRef();
     const jobRef = useRef();
 
-    console.log(job)
-
     const isGroupOpen = () => {
         groupOpen ? setGroupOpen(false) : setGroupOpen(true);
     }

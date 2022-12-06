@@ -1,16 +1,26 @@
 import LoginForm from './loginForm';
-import { useNavigate, } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { getIdExistence } from '../../../store/actions/idExistence';
+
 const LoginFormContainer = () => {
-    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const [searchParams, setSearchParams] = useSearchParams();
+
+    const { idExistence, error } = useSelector( ({idExistence}) => ({
+        idExistence: idExistence.isExistence,
+        error: idExistence.error
+    }))
+
+    
     const onSubmit = (e) => {
         e.preventDefault();
-        navigate("/auth/login/password");
-        //있는 계정 => 비밀번호 확인 => login
-        //없는 계정 => 회원가입
+        dispatch(getIdExistence(decodeURIComponent(searchParams.get("email"))));
     }
 
     return (
-        <LoginForm onSubmit={onSubmit} />
+        <LoginForm onSubmit={onSubmit} idExistence={idExistence} email={searchParams.get("email")}/>
     )
 }
 

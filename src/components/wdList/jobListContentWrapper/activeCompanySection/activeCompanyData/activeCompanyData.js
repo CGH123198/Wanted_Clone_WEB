@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import './activeCompanyData.scss';
 import { sizes } from '../../../../../lib/styles/mediaQuery';
-
+import LoadingSpinner from '../../../../common/loading/loading';
 import { useNavigate } from 'react-router-dom';
 
 const CompanyBackground = styled.div`
@@ -58,7 +58,7 @@ const CompanyLogo = styled.div`
     box-shadow: inset 0 0 0 1px rgb(0 0 0 / 10%);
 `;
 
-const ActiveCompanyData = ({data}) => {
+const ActiveCompanyData = ({data, loading, error}) => {
     const navigate = useNavigate();
     
     const clickPositionList = () => {
@@ -67,13 +67,15 @@ const ActiveCompanyData = ({data}) => {
 
     return (
         <div className="active-company-data" onClick={clickPositionList}>
+            { error && error }
+            { loading && <LoadingSpinner />}
             <header>
-                <CompanyBackground img={data.img} />
+                <CompanyBackground img={data.imgUrl} />
             </header>
             <footer>
-                <CompanyLogo logo={data.logo} />
-                <h4>{data.company}</h4>
-                <h5>{data.positions.length}개 포지션</h5>
+                <CompanyLogo logo={data.companyLogoUrl} />
+                <h4>{data.companyName}</h4>
+                <h5>{data.positionNo}개 포지션</h5>
             </footer>
         </div>
     )

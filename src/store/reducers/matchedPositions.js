@@ -1,5 +1,5 @@
 import { handleActions } from "redux-actions";
-import { MATCHED_JOB_SUCCESS, MATCHED_JOB_FAILURE } from '../actions/positions';
+import { MATCHED_JOB_SUCCESS, MATCHED_JOB_FAILURE } from '../actions/matchedPositions';
 
 
 const initialState = {
@@ -8,7 +8,7 @@ const initialState = {
 }
 
 
-const Positions = handleActions({
+const MatchedPositions = handleActions({
     [MATCHED_JOB_SUCCESS]: (state, action) => ({
         ...state,
         matchedJob: [...action.payload],
@@ -19,4 +19,4 @@ const Positions = handleActions({
     })
 }, initialState);
 
-export default Positions;
+export default MatchedPositions;

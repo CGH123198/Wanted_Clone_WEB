@@ -3,11 +3,11 @@ import createRequestSaga, { createRequestActionTypes } from '../sagas/createRequ
 import { takeLatest } from 'redux-saga/effects';
 import * as companyAPI from '../../lib/APIs/company';
 
-const [
+export const [
     ACTIVE_COMPANY, 
     ACTIVE_COMPANY_SUCCESS, 
     ACTIVE_COMPANY_FAILURE
-] = createRequestActionTypes('company/ACTIVE_COMPANY');
+] = createRequestActionTypes('activeCompany/ACTIVE_COMPANY');
 
 export const getActiveCompany = createAction(
     ACTIVE_COMPANY,
@@ -16,6 +16,6 @@ export const getActiveCompany = createAction(
 
 const getActiveCompanySaga = createRequestSaga(ACTIVE_COMPANY, companyAPI.getActiveCompany);
 
-export function* companySaga() {
+export function* activeCompanySaga() {
     yield takeLatest(ACTIVE_COMPANY, getActiveCompanySaga);
 }

@@ -74,5 +74,13 @@
     3. axios CLIENT => baseURL setting
     4. wdListPage
         - jobGroup navigation 추가
-    5. LandingPage - matchedJobSection 서버 연동
-    6. LoadingSpinner 추가
+    5. LoadingSpinner 추가
+    6. LandingPage - matchedJobSection 서버 연동
+    7. activeCompany(적극 채용 중인 회사) 서버 연동
+
+## 2022. 12. 06
+    1. Register Page
+    2. 회원가입 페이지
+    3. 로그인 기능
+    4. 북마크
+    5. PositionInfo 서버 연동(포지션 상세보기 7번)

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
+
 import Input from './input';
 
 import styled from 'styled-components';
@@ -37,11 +38,13 @@ const Button = styled.button`
     }
 `;
 
-const ValidationInput = ({ id, type}) => {
+const ValidationInput = ({ id, type, getPassword }) => {
     const emailValidation = new RegExp(/[a-zA-Z0-9]+@[a-z]+\.[a-z]{2,3}/);
     const [login, setLogin] = useState(false);
     const [valid, setValid] = useState(false);
     const [value, setValue] = useState("");
+
+    const [searchParams, setSearchParams] = useSearchParams();
 
     const onChangeValue = (e) => {        
         setValue(e.target.value);
@@ -50,6 +53,7 @@ const ValidationInput = ({ id, type}) => {
     const clickLogin = () => {
         //userId => 찾기 dispatch
         //찾기 결과 + userId => state에 저장
+        setSearchParams({ "email": encodeURIComponent(value) })
     }
 
     useEffect( () => {
@@ -105,7 +109,10 @@ const ValidationInput = ({ id, type}) => {
                         validation={valid}
                         value={value}
                         placeholder="비밀번호를 입력해주세요."
-                        onChange={onChangeValue}
+                        onChange={(e) => {
+                            onChangeValue(e);
+                            getPassword(e);
+                        }}
                         type={type}
                     />
                     {

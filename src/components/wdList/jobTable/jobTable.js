@@ -21,7 +21,7 @@ const JobTable = ({categoryOpen }) => {
     return (
         <JobCategoryNav className="job-category-table" open={categoryOpen} >
             <div className="job-category-table-top">
-                <p className="job-category-table-top-title">직무를 선택해 주세요. (최대 5개 선택 가능)</p>
+                <p className="job-category-table-top-title">직무를 선택해 주세요. (최대 1개 선택 가능)</p>
                 <div className="job-category-table-top-list">
                     {
                         jobGroup &&

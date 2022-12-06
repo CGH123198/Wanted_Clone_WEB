@@ -3,7 +3,7 @@ import { takeLatest } from 'redux-saga/effects';
 import createRequestSaga, { createRequestActionTypes } from "../sagas/createRequestSaga";
 import * as PositionAPI from '../../lib/APIs/positions';
 
-export const [MATCHED_JOB, MATCHED_JOB_SUCCESS, MATCHED_JOB_FAILURE] = createRequestActionTypes('position/MATCHED_JOB');
+export const [MATCHED_JOB, MATCHED_JOB_SUCCESS, MATCHED_JOB_FAILURE] = createRequestActionTypes('matchedPosition/MATCHED_JOB');
 
 
 export const getMatchedJob = createAction(
@@ -12,6 +12,6 @@ export const getMatchedJob = createAction(
 
 const getMatchedJobSaga = createRequestSaga(MATCHED_JOB, PositionAPI.fourCardMatchedJob);
 
-export function* positionsSaga() {
+export function* matchedPositionsSaga() {
     yield takeLatest(MATCHED_JOB, getMatchedJobSaga);
 }

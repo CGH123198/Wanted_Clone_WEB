@@ -1,9 +1,20 @@
 import './loginForm.scss';
 import ValidationInput from '../validationInput/validationInput';
 import kakao from '../../../lib/assets/kakao_login_medium_wide.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
-const LoginForm = ({onSubmit}) => {
+const LoginForm = ({onSubmit, idExistence, email}) => {
+    const navigate = useNavigate();
+
+    useEffect( () => {
+        if(idExistence && idExistence.isExistence) {
+            navigate(`/auth/login/password?email=${email}`);
+        }
+        if(idExistence && !idExistence.isExistence) {
+            navigate(`/auth/register?email=${email}`);
+        }
+    })
 
     return (
         <div className="modal-window">

@@ -2,9 +2,7 @@ import RegisterFormContainer from "../../components/auth/register/registerFormCo
 
 const RegisterPage = () => {
     return (
-        <div>
-            <RegisterFormContainer />
-        </div>
+        <RegisterFormContainer />
     )
 }
 

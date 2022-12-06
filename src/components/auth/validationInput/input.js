@@ -48,9 +48,8 @@ const Input = ({
     children, 
     ...rest
 }) => {
-
     return (
-        <>
+        <div className="valid-input-container">
             <StyledInput
                 autoComplete='off'
                 value={value}
@@ -61,7 +60,7 @@ const Input = ({
                 valid={validation} 
                 value={value} 
             >{children}</P>
-        </>
+        </div>
     )
 }
 

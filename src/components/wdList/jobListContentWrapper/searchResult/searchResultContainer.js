@@ -1,13 +1,30 @@
 import SearchResult from "./searchResult";
 import data from './searchResult.json';
-import { useState } from 'react';
+import { useEffect } from 'react';
+import { useParams, useLocation } from 'react-router-dom';
+//:jobgroupId/:jobId
+import { getSearchResultPosition } from '../../../../store/actions/searchPosition';
+import { useSelector, useDispatch } from "react-redux";
+
+
 
 const SearchResultContainer = () => {
-    const [endNum, setEndNum] = useState(12);
-    //무한 스크롤 관리를 위한 state, 
-
+    const { jobgroupId, jobId } = useParams();
+    const dispatch = useDispatch();
+    const location = useLocation();
+    
+    const { searchPosition, loading, error } = useSelector( ({ searchPosition, loading }) => ({
+        searchPosition: searchPosition.searchPosition,
+        loading: loading['searchPosition/SEARCH_POSITIN'],
+        error: searchPosition.error
+    }))
+    
+    useEffect( () => {
+        dispatch(getSearchResultPosition(jobgroupId, jobId));
+    }, [location.pathname, dispatch])
+    
     return (
-        <SearchResult data={data} endNum={endNum} />
+        <SearchResult data={searchPosition} error={error} loading={loading} />
     )
 }
 

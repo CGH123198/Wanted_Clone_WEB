@@ -1,20 +1,25 @@
-//초기 상태값 설정
-const initialState = {
+import { handleActions } from "redux-actions";
+import { LOGIN_SUCCESS, LOGIN_FAILURE } from "../actions/auth";
 
+
+const initialState = {
+    auth: null,
+    error: null,
 }
 
 
 //리듀서 설정
-const HomeReducer = (state = initialState, action) => {
+const Auth = handleActions({
+    [LOGIN_SUCCESS]: (state, action) => ({
+        ...state,
+        auth: action.payload.result,
+        error: null
+    }),
+    [LOGIN_FAILURE]: (state, action) => ({
+        ...state,
+        auth: null,
+        error: action.payload
+    })
+}, initialState);
 
-    switch (action.type) {
-        default: {
-            return {
-                ...state
-            }
-        }
-    }
-
-}
-
-export default HomeReducer;
+export default Auth;

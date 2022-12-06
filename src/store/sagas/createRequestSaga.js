@@ -16,11 +16,11 @@ const createRequestSaga = (type, request) => {
     return function* (action) {
         yield put(isLoadingStart(type));
         try {
-            const { data } = yield call(request, action.payload);
-            console.log("response.data: ", data)
+            const response = yield call(request, action.payload);
+            console.log("response.data: ", response.data)
             yield put({
                 type: SUCCESS,
-                payload: data,
+                payload: response.data,
             });
         } catch (e) {
             console.log("error: ", e)
