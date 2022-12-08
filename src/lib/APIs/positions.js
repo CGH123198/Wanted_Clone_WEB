@@ -1,7 +1,7 @@
 import { K_CLIENT } from './client';
 
 
-export const  fourCardMatchedJob = () => {
+export const fourCardMatchedJob = () => {
         return K_CLIENT.get('/positions-list/', {
             params: {
                 locations: "all",
@@ -37,4 +37,8 @@ export const searchResultPosition = ({jobGroupId, jobId}) => {
             offset: 0
         }
     })
+}
+
+export const getPositionInfo = (positionId) => {
+    return K_CLIENT.get(`/positions/${positionId}`);
 }

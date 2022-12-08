@@ -42,8 +42,8 @@ const CompanyHeader = ({ data }) => {
         {
             data &&
             <div className="company-header-inner-wrapper">
-                <ImgDiv className="company-header-logo-img" img={data.logo}/>
-                <h2>{data.company}</h2>
+                <ImgDiv className="company-header-logo-img" img={data.companyLogoUrl}/>
+                <h2>{data.companyName}</h2>
                 <FollowButton 
                     className="company-header-follow-button"
                     onClick={isFollow}

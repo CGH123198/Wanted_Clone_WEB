@@ -1,7 +1,7 @@
 import './searchResult.scss';
 import FourCardData from '../../../common/fourCardCarousel/fourCardData';
 
-const SearchResult = ({ data, error }) => {
+const SearchResult = ({ data, error, auth, user }) => {
 
     return(
         <div className="search-result-list-container">
@@ -9,7 +9,14 @@ const SearchResult = ({ data, error }) => {
                 {   
                     data &&
                     data.map( elem => 
-                        <li><FourCardData data={elem} className="search-result-data" /></li>    
+                        <li>
+                            <FourCardData
+                                user={user} 
+                                data={elem} 
+                                auth={auth} 
+                                className="search-result-data" 
+                            />
+                        </li>    
                     )
                 }
                 <div></div>

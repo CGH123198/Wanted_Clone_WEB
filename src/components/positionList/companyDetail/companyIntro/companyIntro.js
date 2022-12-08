@@ -40,10 +40,10 @@ const CompanyIntro = ({data}) => {
             <div className="company-intro-img">
                 {
                     data &&
-                    data.companyImg.map( (img, idx) => {
+                    data.imgUrlArr.map( (img, idx) => {
                         return (
                             <button type="button" className="company-intro-img-button" key={idx}>
-                                <img src={img} alt="" />
+                                <img src={img.imgUrl} alt="" />
                             </button>
                         )
                     })

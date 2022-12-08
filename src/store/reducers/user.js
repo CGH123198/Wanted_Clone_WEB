@@ -1,4 +1,4 @@
-import { USER_INFO_SUCCESS, USER_INFO_FAILURE } from "../actions/user";
+import { USER_INFO_SUCCESS, USER_INFO_FAILURE, USER_INFO_EMPTY } from "../actions/user";
 import { handleActions } from "redux-actions";
 
 const initialState = {
@@ -17,6 +17,10 @@ const User = handleActions({
         ...state,
         user: null,
         error: action.payload
+    }),
+    [USER_INFO_EMPTY]: (state, action) => ({
+        ...state,
+        user: null,
     })
 }, initialState);
 

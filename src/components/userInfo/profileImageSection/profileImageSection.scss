@@ -1,0 +1,39 @@
+@import '../../../lib/styles/mediaQuery.scss';
+
+.user-info-profileImage-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.user-info-profileImage-image {
+    border-radius: 50%;
+    border: 1px solid #e1e2e3;
+    background-color: #fff;
+    position: relative;
+    width: 80px;
+    height: 80px;
+
+    & img {
+        position: absolute;
+        left: -1px;
+        top: -1px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+}
+
+.user-welcome-message {
+    color: #000;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: -0.023em;
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}

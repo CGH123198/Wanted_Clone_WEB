@@ -1,0 +1,80 @@
+@import '../../../../lib//styles/mediaQuery.scss';
+
+.resume-basic-form {
+    position: relative;
+    padding-bottom: 38px;
+    margin-top: 10px;
+    padding: 41px 0 30px;
+    border: 1px solid #e1e2e3;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+.resume-header {
+    padding-right: 30px;
+    padding-left: 30px;
+
+    & dt {
+        color: #333;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1;
+    }
+}
+
+.resume-form-block {
+    margin-top: 36px;
+}
+
+.resume-form-block-content {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.main-fieldset {
+    position: relative;
+    margin-top: 28px;
+}
+
+.school-fieldset {
+    position: relative;
+    font-size: 16px;
+}
+
+.static-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 24px;
+    color: #999;
+}
+
+.static-body {
+    margin-top: 9px;
+}
+
+.resume-entry-empty {
+    color: #ff415c;
+}
+
+@media screen and (max-width: $narrowest) {
+    .resume-basic-form {
+        border: none;
+        border-bottom: 1px solid #e1e2e3;
+        border-radius: 0;
+    }
+
+    .resume-header {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .resume-form-block {
+        margin-top: 25px;
+    }
+
+    .resume-form-block-content {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}

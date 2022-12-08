@@ -1,5 +1,4 @@
 import { createAction } from "redux-actions";
-import { takeLatest } from 'redux-saga/effects';
 import createRequestSaga, { createRequestActionTypes } from "../sagas/createRequestSaga";
 import * as IdExistenceAPI from '../../lib/APIs/auth';
 
@@ -16,8 +15,4 @@ export const getIdExistence = createAction(
     email_address => email_address
 )
 
-const getIdExistenceSaga = createRequestSaga(ID_CHECK, IdExistenceAPI.checkIdExists);
-
-export function* IdExistenceSaga() {
-    yield takeLatest(ID_CHECK, getIdExistenceSaga);
-}
+export const getIdExistenceSaga = createRequestSaga(ID_CHECK, IdExistenceAPI.checkIdExists);

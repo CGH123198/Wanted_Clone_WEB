@@ -24,10 +24,10 @@ const PositionImage = ({data}) => {
             if(slideRef.current) { setSCrollWidth(slideRef.current.scrollWidth); }    
         }), 500);
         if(slideRef.current) { setSCrollWidth(slideRef.current.scrollWidth); }    
-    }, [scrollWidth, imageWidth, data.img.length]);
+    }, [scrollWidth, imageWidth, data[1].positionImgArr.length]);
 
     useEffect( () => {
-        setImageWidth(scrollWidth / data.img.length);
+        setImageWidth(scrollWidth / data[1].positionImgArr.length);
     },[scrollWidth]);
 
     return (
@@ -45,7 +45,7 @@ const PositionImage = ({data}) => {
             <div className="position-image-slide" ref={slideRef}>
                 {
                     data &&
-                    data.img.map( elem => <PositionImageData data={elem} alt={data.company} />)
+                    data[1].positionImgArr.map( elem => <PositionImageData data={elem} alt={data[3].companyName} />)
                 }
             </div>
         </section>

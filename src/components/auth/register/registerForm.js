@@ -39,7 +39,7 @@ const SubmitButton = styled.button`
 
 
 
-const RegisterForm = ({ email, cancelAuth }) => {
+const RegisterForm = ({ email, cancelAuth, getPhoneNo, getPassword, getUsername, onSubmit }) => {
     const [phoneNumEnd, setPhoneNumEnd] = useState(false);
     const [passwordEnd, setPasswordEnd] = useState(false);
 
@@ -63,7 +63,7 @@ const RegisterForm = ({ email, cancelAuth }) => {
                 <div className="modal-header-right"></div>
             </div>
             <div className="modal-body">
-                <form>
+                <form onSubmit={onSubmit} >
                     <div className="email-label">
                         <label htmlFor="email" className="email-label-label">이메일</label>
                     </div>
@@ -71,7 +71,12 @@ const RegisterForm = ({ email, cancelAuth }) => {
                     <div className="email-label">
                         <label htmlFor="username" className="email-label-label">이름</label>
                     </div>
-                    <input type="text" placeholder='이름을 입력해주세요..' name="username" className="register-common-input" />
+                    <input 
+                        type="text" placeholder='이름을 입력해주세요..' 
+                        name="username" 
+                        className="register-common-input" 
+                        onChange={getUsername}
+                    />
                     <div className="email-label">
                         <label htmlFor="mobile" className="email-label-label">휴대폰 번호</label>
                     </div>
@@ -79,12 +84,18 @@ const RegisterForm = ({ email, cancelAuth }) => {
                         <div className="select-country">
                             <input type="text" className="register-common-input" value="South Korea +82" disabled />
                         </div>
-                        <MobileInput isPhoneNumEnd={isPhoneNumEnd}/>
+                        <MobileInput 
+                            isPhoneNumEnd={isPhoneNumEnd} 
+                            onChange={getPhoneNo}
+                        />
                     </div>
                     <div className="email-label">
                         <label htmlFor="password" className="email-label-label">비밀번호</label>
                     </div>
-                    <PasswordInput isPasswordEnd={isPasswordEnd}/>
+                    <PasswordInput 
+                        isPasswordEnd={isPasswordEnd} 
+                        onChange={getPassword}
+                    />
                     <hr className="register-from-divider" />
                     {
                         (phoneNumEnd && passwordEnd) ?

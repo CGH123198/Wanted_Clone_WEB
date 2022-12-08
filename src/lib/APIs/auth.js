@@ -1,6 +1,6 @@
-import { K_CLIENT } from "./client";
+import { K_CLIENT, M_CLIENT } from "./client";
 
-export const checkIdExists = (email_address) => K_CLIENT.post(`/login/idExistence`,{
+export const checkIdExists = (email_address) => K_CLIENT.post(`/login/id-existence`,{
     email: email_address, 
 },
 { 
@@ -14,5 +14,15 @@ export const loginRequest = ({email_address, password}) => {
     },
     {  
         header: { "Content-Type": "application/x-www-form-urlencoded" }
+    })
+}
+
+
+export const postRegisterUser = ({email, password, username, phoneNo}) => {
+    return M_CLIENT.post('/users', {
+        email: email,
+        password: password,
+        nickname: username,
+        phoneNo: phoneNo,
     })
 }

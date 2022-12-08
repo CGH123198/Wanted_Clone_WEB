@@ -81,6 +81,14 @@
 ## 2022. 12. 06
     1. Register Page
     2. 로그인 기능
-    3. localStorage에 유저 정보 저장을 통해 로그인 유지
-    3. 북마크
-    4. PositionInfo 서버 연동(포지션 상세보기 7번)
+    3. localStorage에 유저 정보 저장을 통해 유지
+    
+## 2022. 12. 07
+    1. 북마크 추가/삭제
+    2. PositionInfo 서버 연동(포지션 상세보기 7번)
+    3. user정보 수정 페이지
+    4. bookMarkListPage
+
+## 2022. 12. 08
+    1. 회원가입
+    2. 학교 검색 

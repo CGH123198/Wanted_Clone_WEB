@@ -1,26 +1,39 @@
 import CareerInsightContent from "../careerInsightContent/careerInsightContent";
 import './careerInsightList.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useParams } from "react-router-dom";
+import { getEventByTagIdAddedAction, getEventByTagIdAction } from "../../../store/actions/event";
 
 const CareerInsightList = ({ careerData }) => {
     const [isClicked, setIsClicked] = useState(0);
     const [moreContent, setMoreContent] = useState(false);
+    const dispatch = useDispatch();
+    const { tagId } = useParams();
     const REST_CONTENT = careerData.length - 4;
 
     const moreContents = () => {
         if(isClicked === 1) { 
-            //새로고침 axios로 서버에 요청 필요.
-            return; }
-        if(isClicked === 0 && REST_CONTENT > 0) {
+            if(tagId && tagId <=5) {
+                dispatch(getEventByTagIdAction(tagId)) 
+            } else {
+                dispatch(getEventByTagIdAction(0))
+            }
+        } else if(REST_CONTENT > 0 && isClicked === 0){
             setMoreContent(true);
         }
         setIsClicked(1);
     }
+    useEffect( () => {
+        setMoreContent(false);
+        setIsClicked(0)
+    }, [tagId])
 
     return(
         <div>
             <ul className="career-insight-list">
-                {
+                {   
+                    careerData &&
                     careerData.map( (elem, index) => {
                         if(index < 4) {
                             return (
@@ -32,15 +45,15 @@ const CareerInsightList = ({ careerData }) => {
                     })
                 }
                 {
-                    moreContent &&
-                    careerData.slice(careerData.length - REST_CONTENT).map(elem => {
+                    moreContent && 
+                    careerData.slice(4).map( (elem, index) => {
                         return (
-                            <li className="card-section">
-                                <CareerInsightContent data={elem} />
-                            </li>
+                            <li className="card-section" key={index}>
+                                <CareerInsightContent data={elem} /> 
+                            </li>  
                         )
                     })
-                }       
+                }
             </ul>
             <div className="career-insight-list-more-content">
                 <button type="button" className="career-insight-button" onClick={moreContents}>

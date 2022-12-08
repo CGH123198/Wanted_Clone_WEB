@@ -21,7 +21,7 @@ const CarouselComponent = ({ data }) => {
                 slidesPerGroup={1}
                 centeredSlides={true}
                 loop={true}
-                autoplay={{ delay: 5000 }}
+                autoplay={{ delay: 3000 }}
                 navigation={{
                     prevEl: navigationPrevRef.current,
                     nextEl: navigationNextRef.current,

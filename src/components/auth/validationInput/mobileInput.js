@@ -28,7 +28,7 @@ const AuthButton = styled.button`
 `;
 
 
-const MobileInput = ({isPhoneNumEnd}) => {
+const MobileInput = ({isPhoneNumEnd, onChange}) => {
     const mobileValidation = new RegExp(/^01([0|1|6|7|8|9])(\d{7,8})/)
     const [valid, setValid] = useState(false);
     const [value, setValue] = useState("");
@@ -63,7 +63,10 @@ const MobileInput = ({isPhoneNumEnd}) => {
                     placeholder="(예시)0123456789"
                     validation={valid}
                     value={value}
-                    onChange={onChangeValue}
+                    onChange={(e) => { 
+                        onChangeValue(e);
+                        onChange(e);
+                    }}
                 >
                     올바른 전화번호를 입력해주세요.
                 </Input>

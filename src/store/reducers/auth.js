@@ -1,5 +1,5 @@
 import { handleActions } from "redux-actions";
-import { LOGIN_SUCCESS, LOGIN_FAILURE } from "../actions/auth";
+import { LOGIN_SUCCESS, LOGIN_FAILURE, PUSH_LOCAL_AUTH, LOGOUT } from "../actions/auth";
 
 
 const initialState = {
@@ -19,6 +19,16 @@ const Auth = handleActions({
         ...state,
         auth: null,
         error: action.payload
+    }),
+    [PUSH_LOCAL_AUTH]: (state, action) => ({
+        ...state,
+        auth: action.payload,
+        error: null,
+    }),
+    [LOGOUT]: (state, action) => ({
+        ...state,
+        auth: null,
+        error: null,
     })
 }, initialState);
 

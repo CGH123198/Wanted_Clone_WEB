@@ -1,21 +1,28 @@
 import CompanyHeader from "../companyHeader/companyHeader";
 import CompanyDetail from '../companyDetail/companyDetail';
 
-import CompanyData from '../data.json';
-import { useParams } from "react-router-dom";
-import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from "react";
+import { getCompanyInfo } from "../../../store/actions/companyInfo";
 
 const CompanyAllContainer = () => {
-    const [data, setData] = useState(null);
+    const dispatch = useDispatch();
     const { companyId } = useParams();
+    const { companyInfo, error } = useSelector( ({ companyInfo }) => ({
+        companyInfo: companyInfo.companyInfo,
+        error: companyInfo.error,
+    }))
+
+
     useEffect( () => {
-        setData(CompanyData.find(elem => elem.companyId === companyId));    
-    }, [companyId])
+        dispatch(getCompanyInfo(companyId));
+    }, [companyId]);
 
     return (
         <>
-            <CompanyHeader data={data}/>
-            <CompanyDetail data={data}/>            
+            <CompanyHeader data={companyInfo}/>
+            <CompanyDetail data={companyInfo} />            
         </>
     )
 }

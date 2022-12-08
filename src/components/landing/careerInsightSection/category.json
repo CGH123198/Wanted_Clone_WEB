@@ -1,15 +1,15 @@
 [ 
     {
         "tagId": "0",
-        "tagName": "IT/기술"
+        "tagName": "전체"
     },
     {
         "tagId": "1",
-        "tagName": "취업/이직"
+        "tagName": "커리어고민"
     },
     {
         "tagId": "2",
-        "tagName": "인간관계"
+        "tagName": "취업/이직"
     },
     {
         "tagId": "3",
@@ -17,11 +17,11 @@
     },
     {
         "tagId": "4",
-        "tagName": "개발"
+        "tagName": "회사생활"
     },
     {
         "tagId": "5",
-        "tagName": "MD"
+        "tagName": "개발"
     },
     {
         "tagId": "6",
@@ -65,11 +65,11 @@
     }, 
     {
         "tagId": "16",
-        "tagName" : "회사생활"
+        "tagName" : "MD"
     }, 
     {
         "tagId": "17",
-        "tagName" : "커리어고민"
+        "tagName" : "인간관계"
     },
     {
         "tagId": "18",
@@ -78,5 +78,9 @@
     {
         "tagId": "19",
         "tagName" : "브랜딩"
-    } 
+    },
+    {
+        "tagId": "20",
+        "tagName": "IT/기술"
+    }
 ]

@@ -57,13 +57,13 @@ const CategoryNav = () => {
 
     useEffect( () => {
         window.addEventListener("click", (e) => {
-            if(!groupRef.current.contains(e.target) && groupOpen) { setGroupOpen(false); }
+            if(groupRef.current && !groupRef.current.contains(e.target) && groupOpen) { setGroupOpen(false); }
         })
     }, [groupOpen])
 
     useEffect( () => {
         window.addEventListener("click", (e) => {
-            if(!jobRef.current.contains(e.target) && categoryOpen) { setCategoryOpen(false); }
+            if(jobRef.current && !jobRef.current.contains(e.target) && categoryOpen) { setCategoryOpen(false); }
         })
     }, [categoryOpen])
 

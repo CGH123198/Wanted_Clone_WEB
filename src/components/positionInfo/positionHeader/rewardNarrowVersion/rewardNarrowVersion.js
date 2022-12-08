@@ -12,11 +12,11 @@ const RewardNarrowVersion = ({data}) => {
                             <ul>
                                 <li>
                                     <h4>추천인</h4>
-                                    <p>{data.reward.recommender}원</p>
+                                    <p>{data[0].compensationForRecommender}원</p>
                                 </li>
                                 <li>
                                     <h4>지원자</h4>
-                                    <p>{data.reward.applicant}원</p>
+                                    <p>{data[0].compensationForApplicant}원</p>
                                 </li>
                             </ul>
                         }

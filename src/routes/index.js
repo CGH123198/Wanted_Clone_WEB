@@ -13,6 +13,8 @@ import AuthPage from '../pages/auth';
 import ProfileIndexPage from "../pages/profile";
 import BookMarkPage from "../pages/profile/bookMarkPage";
 import PositionInfoPage from "../pages/positionInfo";
+import UserInfoPage from "../pages/userInfo";
+import AdditionalInfoPage from "../pages/profile/additionalInfoPage";
 
 const RootRoute = () => {
     return (
@@ -30,8 +32,10 @@ const RootRoute = () => {
                         <Route path=":jobgroupId/:jobId" element={<SearchResultPage />} />
                     </Route>
                     <Route path="profile" element={<ProfileIndexPage />} >
+                        <Route path="userInfo" element={<UserInfoPage />} />
                         <Route path="bookmark" element={<BookMarkPage />} />
-                    </Route>
+                        <Route path="additionalInfo" element={<AdditionalInfoPage />} />
+                    </Route> 
                 </Route>
                 <Route path="/auth" element={<AuthPage />} >
                     <Route path="login" element={<LoginPage />} />

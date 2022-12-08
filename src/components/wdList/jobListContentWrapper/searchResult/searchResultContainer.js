@@ -1,5 +1,4 @@
 import SearchResult from "./searchResult";
-import data from './searchResult.json';
 import { useEffect } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 //:jobgroupId/:jobId
@@ -13,10 +12,12 @@ const SearchResultContainer = () => {
     const dispatch = useDispatch();
     const location = useLocation();
     
-    const { searchPosition, loading, error } = useSelector( ({ searchPosition, loading }) => ({
+    const { searchPosition, loading, error, auth, user } = useSelector( ({ searchPosition, loading, auth, user }) => ({
         searchPosition: searchPosition.searchPosition,
         loading: loading['searchPosition/SEARCH_POSITIN'],
-        error: searchPosition.error
+        error: searchPosition.error,
+        auth: auth.auth,
+        user: user.user,
     }))
     
     useEffect( () => {
@@ -24,7 +25,13 @@ const SearchResultContainer = () => {
     }, [location.pathname, dispatch])
     
     return (
-        <SearchResult data={searchPosition} error={error} loading={loading} />
+        <SearchResult 
+            user={user}
+            data={searchPosition} 
+            error={error} 
+            loading={loading} 
+            auth={auth}
+        />
     )
 }
 

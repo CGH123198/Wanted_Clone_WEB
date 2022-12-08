@@ -2,8 +2,6 @@ import MediaQuery from "react-responsive";
 import { sizes } from "../../../../../lib/styles/mediaQuery";
 import './activeCompanySlide.scss';
 
-import data from '../activeCompanyData/activeCompanyData.json';
-
 import { useEffect } from 'react';
 import { getActiveCompany } from "../../../../../store/actions/activeCompany";
 import ActiveCompanyData from "../activeCompanyData/activeCompanyData";

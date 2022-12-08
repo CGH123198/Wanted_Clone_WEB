@@ -1,0 +1,90 @@
+@import '../../../../lib/styles/mediaQuery.scss';
+
+.header-popOver-container {
+    position: relative;
+    width: 192px;
+    right: -20px;
+    margin-top: 13px;
+    margin-left: -141px;
+    padding: 0!important;
+    display: block;
+    //transform: translate(50%,8px);
+    height: 100%;
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.header-popOver-wrapper {
+    overflow: hidden;
+    box-sizing: border-box;
+    min-width: 120px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 10px 0 rgba(0,0,0,.15);
+    border: 1px solid #cdcdcd;
+    background-color: #fff;
+}
+
+.menu-popOver-ul {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10px;
+    margin-bottom: 0;
+    height: 100%;
+
+    & li {
+        box-sizing: border-box;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        height: 34px!important;
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 auto!important;
+        border-bottom: 1px solid #e1e2e3;
+    }
+
+    & li a {
+        box-sizing: border-box;
+        cursor: pointer;
+        max-width: none !important;
+        width: 100%;
+        vertical-align: bottom;
+        height: 100%;
+        font-size: 14px;
+        color: #333;
+        display: flex!important;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        font-weight: 400!important;
+        line-height: normal!important;
+        padding: 0 8px!important;
+    }
+
+    & li:last-child {
+        border-bottom: none;
+        background-color: #f7f7f7;
+    }
+
+    & li:last-child::before {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: $narrower) {
+    .header-popOver-container {
+        right: 0px;
+        margin-left: -165px;
+    }
+}
+
+@media  screen and (min-width: $narrow) {
+    .header-popOver-container {
+        right: none;
+        left: clac(1060 + 10%);
+    }
+}

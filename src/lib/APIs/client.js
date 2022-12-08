@@ -6,5 +6,5 @@ export const M_CLIENT = axios.create({
 
 
 export const K_CLIENT = axios.create({
-    baseURL: 'https://dev.server-class.shop/',
+    baseURL: 'https://prod.server-class.shop/',
 })

@@ -45,7 +45,7 @@ const P = styled.p`
 const Input = ({
     validation,
     value,
-    children, 
+    children = null, 
     ...rest
 }) => {
     return (

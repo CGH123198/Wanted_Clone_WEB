@@ -22,8 +22,9 @@ const ArrowDown = styled.i`
 const PositionList = ({data}) => {
     const [positionNumber, setPositionNumber] = useState(4);
     const [innerWidth, setInnerWidth] = useState();
+    const [button, setButton] = useState(false);
     const [showAll, setShowAll] = useState(false);
-
+    
     const isShowAll = () => {
         if(showAll) { 
             setShowAll(false); 
@@ -31,9 +32,17 @@ const PositionList = ({data}) => {
         }
         else { 
             setShowAll(true);
-            setPositionNumber(data.positions.length); 
+            setPositionNumber(data.position.length); 
         };
     }
+
+    useEffect(() => {
+        if(data && data.position.length > positionNumber) {
+            setButton(true);
+        } else {
+            setButton(false);
+        }
+    }, [positionNumber, data])
 
     useEffect( () => {
         window.addEventListener( "resize", () => {
@@ -56,16 +65,18 @@ const PositionList = ({data}) => {
             <div className="company-detail-job-listwrapper">
                 {
                     data &&
-                    data.positions.map( (position, index) => {
+                    data.position.map( (pos, index) => {
                         if(index < positionNumber) {
                             return(
-                                <PositionListData position={position} data={data}/>
+                                <PositionListData position={pos} />
                             )
                         }
                     })
                 }
             </div>
-            <button type="button" className="show-more-button" onClick={isShowAll}>
+            {
+                button &&
+                <button type="button" className="show-more-button" onClick={isShowAll}>
                 {
                     !showAll ?
                     "더 많은 포지션 보기" :
@@ -73,6 +84,7 @@ const PositionList = ({data}) => {
                 }
                 <ArrowDown showAll={showAll} />
             </button>
+            }
         </div>
     )
 }

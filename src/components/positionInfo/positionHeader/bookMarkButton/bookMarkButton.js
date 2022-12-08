@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import { useState } from 'react';
-
 const BookMarkBtn = styled.button`
     margin-bottom: 10px;
     display: flex;
@@ -22,7 +20,7 @@ const BookMarkBtn = styled.button`
     text-align: center;
 
     & svg {
-        color: ${ ({mark}) => mark ? "#36f" : "white"};
+        color: ${ ({bookMark}) => bookMark ? "#36f" : "white"};
         stroke: #36f;
         stroke-width: 1.5px;
         margin-right: 8px;
@@ -35,21 +33,16 @@ const BookMarkBtn = styled.button`
     }
 `;
 
-const BookrMarkButton = () => {
-    const [mark, setMark] = useState(false);
-
-    const isMarked = () => {
-        mark ? setMark(false) : setMark(true);
-    }
+const BookrMarkButton = ({isBookMark, bookMark}) => {
 
     return (
         <BookMarkBtn
-            onClick={isMarked}
-            mark={mark}
+            onClick={isBookMark}
+            bookMark={bookMark}
         >
             <svg width="13" height="17" viewBox="0 0 13 17" ><defs><path id="bookmarkIconFill" d="M6.25 13.21L.905 16.22c-.403.228-.905-.06-.905-.517V.596C0 .267.27 0 .605 0h11.29c.334 0 .605.267.605.596v15.107c0 .458-.502.745-.905.518L6.25 13.209z"></path></defs><g fill="none" fillRule="evenodd" transform="translate(.188)"><use fill="currentColor" xlinkHref="#bookmarkIconFill"></use></g></svg>
             {
-                mark ?
+                bookMark ?
                 "북마크 완료" :
                 "북마크 하기"
             }

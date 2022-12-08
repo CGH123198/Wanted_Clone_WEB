@@ -1,16 +1,15 @@
 import './containerProfile.scss';
-import BookMarkBodyContainer from "../bookMarkBody/bookMarkBodyContainer";
 
-const ContainerProfile = ({ children }) => {
+const ContainerProfile = ({ children, title }) => {
     return (
         <div className="container-profile">
             <nav className="nav-profile">
                 <h2>
-                    <p>{children}</p>
-                    <button type="button" className="nav-profile-button">{children}</button>
+                    <p>{title}</p>
+                    <button type="button" className="nav-profile-button">{title}</button>
                 </h2>
             </nav>
-            <BookMarkBodyContainer />
+            {children}
         </div>
     )
 }

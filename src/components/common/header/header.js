@@ -4,6 +4,9 @@ import { sizes } from '../../../lib/styles/mediaQuery';
 import MediaQuery from 'react-responsive';
 import './header.scss';
 import { useLocation } from 'react-router-dom';
+import { useState, useRef, useEffect } from 'react';
+
+import HeaderNav from './headerNav/headerNav';
 
 const HeaderWrap = styled.div`
     position: fixed;
@@ -23,8 +26,31 @@ const Li = styled.li`
     }
 `;
 
-const Header = ({ user }) => {
+const Header = ({ user, auth }) => {
     const location = useLocation();
+    const [navOpen, setNavOpen] = useState(false);
+    const navRef = useRef();
+    const narrowNavRef = useRef();
+
+    const isNavOpen = () => {
+        navOpen ?
+        setNavOpen(false) :
+        setNavOpen(true);
+    }
+
+    useEffect( () => {
+        window.addEventListener( "click", (e) => {
+            if(navRef.current && !navRef.current.contains(e.target)) {
+                setNavOpen(false);
+            }
+        })
+
+        window.addEventListener( "click", (e) => {
+            if(narrowNavRef.current && !narrowNavRef.current.contains(e.target)) {
+                setNavOpen(false);
+            }
+        })
+    }, [])
 
     return (
         <HeaderWrap>
@@ -63,9 +89,12 @@ const Header = ({ user }) => {
                                 </i>
                             </Link>
                         </div>
-                        <MediaQuery maxWidth={sizes.narrower}>
-                            <button type="button" className="blue-signup-button"><Link to="/login">회원가입하기</Link></button>
-                        </MediaQuery>
+                        {
+                            !user &&
+                            <MediaQuery maxWidth={sizes.narrower}>
+                                <button type="button" className="blue-signup-button"><Link to="/auth/login">회원가입하기</Link></button>
+                            </MediaQuery>
+                        }
                     </div>
                     <ul className="menu-className" >
                         <MediaQuery maxWidth={sizes.narrowest}>
@@ -88,16 +117,30 @@ const Header = ({ user }) => {
                             </button></li>
                             <MediaQuery minWidth={sizes.narrower}>
                             {
-                                !user ?
-                                <li><Link to="/auth/login">회원가입/로그인</Link></li> :
-                                <li><Link to="#">{user.email}</Link></li>
+                                (auth && user) ?
+                                <li ref={navRef}>
+                                    <Link to="#" onClick={isNavOpen} >
+                                        {user.userName}님
+                                    </Link>
+                                    {
+                                        navOpen &&
+                                        <HeaderNav />
+                                    }
+                                </li> :
+                                <li><Link to="/auth/login">회원가입/로그인</Link></li>
                             }
                             <li className="dashboard-button" ><Link to="#">기업 서비스</Link></li>
                             </MediaQuery>
                             <MediaQuery maxWidth={sizes.narrower}>
-                                <li><button type="button">
-                                    <svg width="18" height="18" xmlns="https://www.w3.org/2000/svg"><defs><path d="M9 7.5a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 9 7.5zm5.05 0a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 14.05 7.5zM4 7.5a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 4 7.5z" id="a"></path></defs><g fill="none" fillRule="evenodd"><mask id="b" fill="#fff"><use xlinkHref="#a"></use></mask><use fill="#333" xlinkHref="#a"></use><g mask="url(#b)" fill="#333"><path d="M0 0h18v18H0z"></path></g></g></svg>
-                                </button></li>
+                                <li ref={narrowNavRef}>
+                                    <button type="button" onClick={isNavOpen}>
+                                        <svg width="18" height="18" xmlns="https://www.w3.org/2000/svg"><defs><path d="M9 7.5a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 9 7.5zm5.05 0a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 14.05 7.5zM4 7.5a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 4 7.5z" id="a"></path></defs><g fill="none" fillRule="evenodd"><mask id="b" fill="#fff"><use xlinkHref="#a"></use></mask><use fill="#333" xlinkHref="#a"></use><g mask="url(#b)" fill="#333"><path d="M0 0h18v18H0z"></path></g></g></svg>
+                                    </button>
+                                    {
+                                        (user && navOpen) &&
+                                        <HeaderNav />
+                                    }
+                                </li>
                             </MediaQuery>
                         </ul>
                     </aside>

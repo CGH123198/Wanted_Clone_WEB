@@ -1,11 +1,11 @@
 import ContainerProfile from "../../components/profile/containerProfile/containerProfile";
-
+import BookMarkBodyContainer from "../../components/profile/bookMarkBody/bookMarkBodyContainer";
 
 const BookMarkPage = () => {
     return (
         <div>
-            <ContainerProfile>
-                북마크
+            <ContainerProfile title="북마크">
+                <BookMarkBodyContainer />
             </ContainerProfile>
         </div>
     )

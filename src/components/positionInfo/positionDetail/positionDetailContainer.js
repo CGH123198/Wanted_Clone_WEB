@@ -3,20 +3,31 @@ import PositionData from '../data.json';
 
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getPositionInfo } from '../../../store/actions/positionInfo';
 
 const PositionDetailContainer = () => {
-    const [data, setData] = useState();
     const { positionId } = useParams();
+    const dispatch = useDispatch();
     
+    const { positionInfo, error } = useSelector(({positionInfo}) => ({
+        positionInfo: positionInfo.positionInfo,
+        error: positionInfo.error
+    }))
+
+    useEffect(() => {
+        dispatch(getPositionInfo(positionId));
+    }, [positionId]);
+
     useEffect( () => {
-        setData(PositionData.find(elem => elem.positionId === positionId));
-    }, [positionId, data]);
+        console.log(positionInfo)
+    }, [positionInfo])
 
     return (
         <>
             {
-                data &&
-                <PositionDetail data={data} />
+                positionInfo &&
+                <PositionDetail  data={positionInfo} />
             }
         </>
     )

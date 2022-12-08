@@ -1,7 +1,7 @@
 import Input from './input';
 import { useState, useEffect } from 'react';
 
-const PasswordInput = ({isPasswordEnd}) => {
+const PasswordInput = ({isPasswordEnd = f => f, getNewPw = f => f, onChange = f => f }) => {
     const passwordValidation = new RegExp(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[~!@#$%^&*()+|=])[A-Za-z\d~!@#$%^&*()+|=]{6,20}$/);
     const [valid, setValid] = useState(false);
     const [value, setValue] = useState("");
@@ -53,7 +53,11 @@ const PasswordInput = ({isPasswordEnd}) => {
                 validation={passwordCheckValid}
                 value={checkValue}
                 type="password"
-                onChange={onChangeCheckValue}
+                onChange={(e) => { 
+                    onChangeCheckValue(e);
+                    getNewPw(e)
+                    onChange(e)
+                }}
             >   
                 비밀번호가 서로 일치하지 않습니다.
             </Input>

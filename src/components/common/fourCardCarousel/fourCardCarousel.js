@@ -8,7 +8,7 @@ import LoadingSpinner from '../loading/loading';
 import FourCardData from './fourCardData';
 
 
-const FourCardCarousel = ({data, loading, error}) => {
+const FourCardCarousel = ({ data, loading, error, user=null, auth=null }) => {
     const navigationPrevRef = useRef(null);
     const navigationNextRef = useRef(null);
     return (
@@ -42,7 +42,7 @@ const FourCardCarousel = ({data, loading, error}) => {
                 data.map(elem => {
                     return (
                         <SwiperSlide className='swiper-item'>
-                            <FourCardData data={elem} />
+                            <FourCardData data={elem} user={user} auth={auth} />
                         </SwiperSlide>
                     )
                 })

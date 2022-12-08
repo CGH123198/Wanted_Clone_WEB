@@ -1,0 +1,123 @@
+@import '../../lib/styles/mediaQuery.scss';
+
+.user-info-body-container {
+    max-width: 628px;
+    box-sizing: border-box;
+    width: 628px;
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.user-info-account-management-section {
+    width: 100%;
+    border: 1px solid #e1e2e3;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 0px 20px;
+    margin-bottom: 30px;
+
+    &>ul {
+        padding: 0px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    & ul li {
+        display: flex;
+        align-items: center;
+        cursor: inherit;
+    }
+
+    & ul li:not(:first-child) {
+        border-top: 1px solid #e1e2e3;
+        cursor: pointer;
+    }
+
+    & ul li span {
+        display: flex;
+        align-items: inherit;
+        justify-content: inherit;
+        margin-top: 1px;
+    }
+
+    & ul li p {
+        display: block;
+        margin: 1em auto;
+    }
+
+    & ul li p:first-child {
+        color: #000;
+        font-weight: 400;
+        text-align: left;
+        letter-spacing: 0.0056em;
+        font-size: 16px;
+        line-height: 24px;
+        min-width: 120px;
+        margin-right: 15px;
+    }
+
+    & ul li p:nth-child(2) {
+        color: #333;
+        font-weight: 300;
+        text-align: left;
+        letter-spacing: 0.0056em;
+        font-size: 16px;
+        line-height: 24px;
+        flex: 1 1 0%;
+        margin-right: 10px;
+        word-break: break-all;
+    }
+}
+
+.user-info-account-management-title {
+    display: block;
+    margin: 1em auto;
+    color: #000;
+    font-weight: 500;
+    text-align: left;
+    letter-spacing: -0.012em;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.user-info-account-management-guide-message {
+    color: #767676;
+    font-weight: 300;
+    text-align: left;
+    letter-spacing: 0.0056em;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.private-info-protection-ul {
+    cursor: pointer;
+
+    & li p {
+        margin: 1em auto 1em 0!important;
+    }
+}
+
+
+
+@media screen and (max-width: $narrowest) {
+    .user-info-body-container {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .user-info-account-management-section {
+        padding: 0px 15px;
+
+        & ul li p:first-child {
+            min-width: auto;
+        }
+
+        & ul li p:nth-child(2) {
+            text-align: right;
+        }
+    }
+}

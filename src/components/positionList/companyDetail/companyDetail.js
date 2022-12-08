@@ -9,9 +9,9 @@ const CompanyDetail = ({data}) => {
         <div className="company-detail-innerwrapper">
             <CompanyTagList data={data} />
             <div className="company-detail-content-column">
-                <PositionList data={data} />
+                <PositionList data={data}/>
                 <CompanyIntro data={data} />
-                <CompanyNews data={data} />
+                <CompanyNews  data={data} />
             </div>
         </div>
     )
