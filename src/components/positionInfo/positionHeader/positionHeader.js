@@ -7,7 +7,7 @@ import RewardNarrowVersion from './rewardNarrowVersion/rewardNarrowVersion';
 const PositionHeader = ({data}) => {
     return (
         <section className="position-header-class">
-            <h2>{data.position}</h2>
+            <h2>{data[0].positionName}</h2>
             <div>
                 <h6><Link to={`/companies/${data[3].companyId}`}>{data[3].companyName}</Link></h6>
                 <div className="responsive-level">

@@ -39,7 +39,7 @@ const RegisterFormContainer = () => {
         e.preventDefault();
         dispatch(postRegisterUserAction(decodeURIComponent(searchParams.get("email")), password, username, phoneNo));
         alert(register.message);
-        window.location.reload("/");
+        window.location.replace("/");
     }
 
     return (

@@ -64,3 +64,11 @@ export const patchPassword = ({jwt_token, userId, oldPassword, newPassword}) => 
         }
     }
 );
+
+export const patchMembershipWithDrawal = ({jwt_token, userId}) => M_CLIENT.patch(
+    `/users/${userId}/exit`, {}, {
+    headers: {
+        'Content-type': 'application/json',
+        'x-access-token': jwt_token
+    }
+})

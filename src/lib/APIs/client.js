@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const M_CLIENT = axios.create({
-    baseURL: 'https://dev.minjuling.shop',
+    baseURL: 'https://prod.minjuling.shop',
 })
 
 

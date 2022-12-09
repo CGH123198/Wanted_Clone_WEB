@@ -19,10 +19,6 @@ const PositionDetailContainer = () => {
         dispatch(getPositionInfo(positionId));
     }, [positionId]);
 
-    useEffect( () => {
-        console.log(positionInfo)
-    }, [positionInfo])
-
     return (
         <>
             {

@@ -37,6 +37,9 @@ import { registerSaga } from "../sagas/registerSaga";
 import UniverSity from "./university";
 import { universitySaga } from "../sagas/universitySaga";
 
+import WithDrawal from './withdrawal';
+import { withdrawalSaga } from "../sagas/withDrawalSaga";
+
 import { all } from 'redux-saga/effects';
 
 const RootReducer = combineReducers({
@@ -54,7 +57,8 @@ const RootReducer = combineReducers({
     bookMarkList: BookMarkList,
     event: Event,
     register: Register,
-    university: UniverSity
+    university: UniverSity,
+    withDrawal: WithDrawal
 })
 
 export function* rootSaga() {
@@ -69,7 +73,8 @@ export function* rootSaga() {
         bookMarkListSaga(),
         eventSaga(),
         registerSaga(),
-        universitySaga()
+        universitySaga(),
+        withdrawalSaga()
     ]);
 }
 
