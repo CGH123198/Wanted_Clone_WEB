@@ -1,5 +1,26 @@
 # Wanted 클론코딩
 
+## 목표
+`Wanted`의 WEB 사이트를 보고 2주동안 기능들을 추려서 완성.
+
+## 플로우 차트
+<img src="./flowChart.png" height="550"><br><br>
+
+## API 명세서(본인 우디: 연동한 API는 check)
+[API명세서] (https://docs.google.com/spreadsheets/d/1yunKBwvCzu4WzdhxYjpCZhn2RyoL8Mx3/edit?usp=sharing&ouid=109797634360706451664&rtpof=true&sd=true)
+
+## 구현 기능
+1. 회원가입/로그인(카카오 로그인 X)
+2. 회원탈퇴
+3. 회원정보수정
+4. 학교검색
+5. 채용정보검색(회사정보, 포지션정보)
+6. 이벤트검색
+7. 북마크 추가/취소
+
+## 기술스택
+- 프론트엔드: react, redux, redux-saga, axios, styled-components, scss
+
 ## 2022. 11. 26.
     1. module설치(axios, styled-compoents, react-router-dom, node-sass, react-responsive)
     2. 라우팅 경로 설정.
