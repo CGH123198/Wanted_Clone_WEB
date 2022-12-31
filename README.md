@@ -4,7 +4,7 @@
 `Wanted`의 WEB 사이트를 보고 2주동안 기능들을 추려서 완성.
 
 ## 플로우 차트
-<img src="./flowChart.png" height="550"><br><br>
+<img src="./flowChart.png"><br><br>
 
 ## API 명세서(본인 우디: 연동한 API는 check)
 [API명세서] (https://docs.google.com/spreadsheets/d/1yunKBwvCzu4WzdhxYjpCZhn2RyoL8Mx3/edit?usp=sharing&ouid=109797634360706451664&rtpof=true&sd=true)
