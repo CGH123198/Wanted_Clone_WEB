@@ -1,7 +1,8 @@
 # Wanted 클론코딩
 
 ## 목표
-`Wanted`의 WEB 사이트를 보고 2주동안 기능들을 추려서 완성.
+Rising Test - 실제 서비스 중인 WEB 사이트들 중 임의로 지정받고, 랜덤으로 매칭된 팀원들과 2주동안 기능들을 추려서 클론코딩하는 테스트 응시.
+(결과에 따라 `불합격`, `수료`, `우수수료`)
 
 ## 플로우 차트
 <img src="./flowChart.png"><br><br>
@@ -20,6 +21,10 @@
 
 ## 기술스택
 - 프론트엔드: react, redux, redux-saga, axios, styled-components, scss
+
+## 아쉬웠던 점
+- 혼자 프론트엔드를 작업하다보니 commit메세지를 안일하게 작성한 것 같다.
+- 비동기 통신에 대한 에러처리를 꼼꼼하게 해주지 못했다.
 
 ## 2022. 11. 26.
     1. module설치(axios, styled-compoents, react-router-dom, node-sass, react-responsive)
