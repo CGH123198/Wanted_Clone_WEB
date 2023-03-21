@@ -49,18 +49,28 @@
 ### 1. 랜딩 페이지(커리어 인사이트 조회) - `LandingPage/CareerInsight`
 
 - `커리어 고민, 취업/이직, 리더십 등` 관심사에 따른 게시물들이 모여있는 페이지입니다.
-- 반응형 carousel이 특징인 페이지입니다.
-  <br><Br>
+- 반응형 carousel이 특징인 페이지입니다.<br><Br><br>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68717963/226296299-b2eef6b5-c6d2-4a33-9d2b-7f8c53478b62.gif" />
+</p>
+  <br><Br><br><Br>
 
 ### 2. 회원가입/로그인 페이지 - `AuthPage`
 
 - 정규표현식을 이용한 이메일 및 비밀번호 검증을 적용하였습니다.
-  <br><Br>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68717963/226307539-6e4a2aa1-f806-4b7e-aca2-bcfc575dae0e.gif" />
+  <img src="https://user-images.githubusercontent.com/68717963/226312130-0b956040-9dee-43a5-83ba-4f465992855b.gif" />
+</p>
+  <br><Br><br><Br>
 
 ### 3. 유저정보 페이지 - `UserInfoPage`
 
 - 개인신상 정보(프로필 이미지, 전화번호 등) 조회/수정이 가능한 페이지입니다.
 - 회원 탈퇴 기능이 있습니다.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68717963/226319935-be9dbc43-fdf4-45d8-85d3-f9459f6cd5d9.gif" />
+</p>
   <br><Br>
 
 ### 4. 북마크 페이지 - `BookMarkPage`
