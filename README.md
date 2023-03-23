@@ -57,6 +57,7 @@
 
 ### 2. 회원가입/로그인 페이지 - `AuthPage`
 
+- 로컬 로그인/회원가입이 가능합니다.
 - 정규표현식을 이용한 이메일 및 비밀번호 검증을 적용하였습니다.
 <p align="center">
   <img src="https://user-images.githubusercontent.com/68717963/226307539-6e4a2aa1-f806-4b7e-aca2-bcfc575dae0e.gif" />
@@ -83,29 +84,42 @@
 
 - 대학 검색 기능 및 개인 정보가 대략적으로 표시되는 페이지입니다.
 - 대학교 검색 기능: 검색어값의 변화에 따라 서버로 너무 잦은 request를 보내는 것을 방지하기 위하여 redux-saga의 주요 함수인 `debounce`를 사용하였습니다.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68717963/226601514-19119a36-2662-42a9-b905-53b8ee0cb030.gif" />
+</p>
   <br><Br>
 
 ### 6. 채용 페이지 - `JobsFeedPage`
 
 - 채용 중인 포지션을 테마별로 개괄적으로 보여주는 페이지입니다.
-- 반응형 슬라이더를 넣어주었습니다.
+- 다수의 반응형 슬라이더와 Carousel이 특징입니다.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68717963/227108099-2258337a-2b6c-4010-92e1-3e71d4872056.gif" />
+</p>
   <br><Br>
 
 ### 7. 포지션 리스트 페이지 - `PositionListPage`
 
-- 특정 회사의 채용중인 포지션 리스트를 확인 할 수 있습니다.
+- 특정 회사의 채용중인 포지션 리스트를 확인 할 수 있습니다
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68717963/226607715-be8556bb-ac87-4f7c-83ae-0c401cb903ae.png" />
+</p>
   <br><Br>
 
 ### 8. 포지션 상세 정보 페이지 - `PositionInfoPage`
 
 - 채용중인 포지션에 대한 상세 정보가 담겨있는 페이지입니다.
 - long text들은 서버에서 innerHtml 형태로 받아와서 스타일링만 넣어주었습니다.
+
   <br><Br>
 
 ### 9. 채용 정보 검색 페이지 - `WdListPage/SearchResultPage`
 
 - 전체 직무와 해당 직무 내에서 상세 직군을 태그별로 클릭하여 검색할 수 있는 페이지입니다.
-
+- 서버 데이터는 개발직군 데이터만 존재하여 다른 태그를 클릭할 경우 데이터가 표시되지 않습니다.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68717963/226605500-3680820d-6f76-45a1-be43-4a41b1e2ecd1.gif" />
+</p>
 <br><br>
 
 <br><br>
