@@ -18,12 +18,12 @@
 
 ## # 기술스택
 
-<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white">
-<img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=Redux&logoColor=white">
-<img src="https://img.shields.io/badge/Redux--Saga-61DAFB?style=for-the-badge&logo=Redux-Saga&logoColor=white">
-<img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white">
-<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=Sass&logoColor=white">
-<img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white">
+<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white" style="display: inline;">
+<img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=Redux&logoColor=white" style="display: inline;">
+<img src="https://img.shields.io/badge/Redux--Saga-61DAFB?style=for-the-badge&logo=Redux-Saga&logoColor=white" style="display: inline;">
+<img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" style="display: inline;">
+<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=Sass&logoColor=white" style="display: inline;">
+<img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white" style="display: inline;">
 <br><br><br><br>
 
 ## # 플로우 차트
@@ -77,7 +77,9 @@
 ### 4. 북마크 페이지 - `BookMarkPage`
 
 - 유저가 북마크한 채용 포지션이 저장되는 페이지입니다.
-- 해당 페이지 내에서도 북마크 추가/취소가 가능합니다.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68717963/227440114-3640163f-f3b0-4469-9870-7a73d0f10bc2.gif" />
+</p>
   <br><Br>
 
 ### 5. 추가 정보 페이지 - `AdditionalInfoPage`
@@ -100,7 +102,7 @@
 
 ### 7. 포지션 리스트 페이지 - `PositionListPage`
 
-- 특정 회사의 채용중인 포지션 리스트를 확인 할 수 있습니다
+- 특정 회사의 채용 중인 포지션 리스트를 확인 할 수 있습니다
 <p align="center">
   <img src="https://user-images.githubusercontent.com/68717963/226607715-be8556bb-ac87-4f7c-83ae-0c401cb903ae.png" />
 </p>
@@ -110,7 +112,9 @@
 
 - 채용중인 포지션에 대한 상세 정보가 담겨있는 페이지입니다.
 - long text들은 서버에서 innerHtml 형태로 받아와서 스타일링만 넣어주었습니다.
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68717963/227441069-a2e8a1f6-80d6-480f-92c6-a5b8018fac64.gif" />
+</p>
   <br><Br>
 
 ### 9. 채용 정보 검색 페이지 - `WdListPage/SearchResultPage`
