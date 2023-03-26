@@ -34,13 +34,13 @@
 
 ## # 특징
 
-### - `Presentational and Container Component Pattern`을 적용하여 렌더링 관련 로직과, 데이터 관련 로직을 분리하려 했습니다.
+- `Presentational and Container Component Pattern`을 적용하여 렌더링 관련 로직과, 데이터 관련 로직을 분리하려 했습니다.
 
-### - `768px, 992px, 1200px`로 나누어서 반응형 웹을 적용했습니다.
+- `768px, 992px, 1200px`로 나누어서 반응형 웹을 적용했습니다.
 
-### - `className`으로 특정 HTMLElement를 개발자 도구에서 빠르게 식별하기위해 `styled-components`는 가변 스타일링에 사용하고 scss를 주로 사용했습니다.
+- `className`으로 특정 HTMLElement를 개발자 도구에서 빠르게 식별하기위해 `styled-components`는 가변 스타일링에 사용하고 scss를 주로 사용했습니다.
 
-### - 인증 방식은 jwt 토큰을 이용하여 회원가입/로그인 등을 처리하였고, 로그인 유지는 jwt 토큰을 localStorage에 저장하여 구현하였습니다.
+- 인증 방식은 jwt 토큰을 이용하여 회원가입/로그인 등을 처리하였고, 로그인 유지는 jwt 토큰을 localStorage에 저장하여 구현하였습니다.
 
 <br><Br>
 
