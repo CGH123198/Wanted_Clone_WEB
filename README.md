@@ -18,7 +18,7 @@
 
 ## # 기술스택
 
-<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white" style="display: inline;">
+<a><img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"></a>
 <img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=Redux&logoColor=white" style="display: inline;">
 <img src="https://img.shields.io/badge/Redux--Saga-61DAFB?style=for-the-badge&logo=Redux-Saga&logoColor=white" style="display: inline;">
 <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" style="display: inline;">
